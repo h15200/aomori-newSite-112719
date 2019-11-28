@@ -1,9 +1,42 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: 'Hideaki Aomori',
+    menuLinks: [
+      {
+        name: 'HOME',
+        link: '/'
+      },
+      {
+        name: 'ABOUT',
+        link: '/about'
+      },
+      {
+        name: 'MUSIC',
+        link: '/music'
+      },
+      {
+        name: 'SERVICES',
+        link: '/services'
+      }
+    ]
+
+  },
+  plugins: [
+    "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Proza Libre`,
+            variants: [`400`, `500`, '600'],
+          },
+          {
+            family: `Ubuntu`,
+            variants: [`400`, `500`, `700`],
+          },
+        ],
+      },
+    },
+  ],
 }

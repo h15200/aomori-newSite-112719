@@ -12,7 +12,7 @@ module.exports = {
     "arrow-parens": [
       "error", "as-needed"
     ],
-    "comma-dangle": 1,
+    "comma-dangle": 0,
     "no-console": 1,
     "quotes": 0,
     "no-multiple-empty-lines": 0,
