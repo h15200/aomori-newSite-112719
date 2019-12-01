@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 
 import "../styles/index.scss"
@@ -6,11 +6,13 @@ import Header from "./header"
 import Footer from "./footer"
 
 const Layout = props => (
-  <Fragment>
-    <Header />
-    {props.children}
+  <div className="container">
+    <div className="main">
+      <Header />
+      {props.children}
+    </div>
     <Footer />
-  </Fragment>
+  </div>
 )
 
 Layout.propTypes = {

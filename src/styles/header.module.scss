@@ -1,60 +1,201 @@
 @import '../styles/config';
 
+/*********
+VARIABLES - _config.scss 
+*********/
+
+
+/****************
+TYPOGRAPHY, COLOR
+****************/
 
 .container {
-  text-align: center;
   background-color: $background-color;
-  font-family: $default-font-family ;
-  list-style: none;
-  min-height: 100vh;
+  font-family: $default-font-family;
 }
 
 .title {
   font-family: $heading-font-family;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 600;
-  padding-top: 1em;
-  margin-bottom: 1em;
   text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
   word-spacing: 2rem;
+}
+
+.navPages {
+  color: black;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+
+/**********
+LAYOUT
+**********/
+
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
 }
 
 .socialFlex {
   display: flex;
   justify-content: center;
-  margin-bottom: 5em;  
 }
 
 .navFlex {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
-.dropdown{
-   
+
+.pageGroup {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 0 2em 10em 2em;
-
-  .navPages {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-  }
-
-  div{
-   font-size: 1rem;
-   position: absolute;
-   top: 4.5em;
-
-   a{
-     padding: .2em;
-   }
-
-  }
 }
 
-.dropdownItemFlex{
-  display: flex;
-  flex-direction: column;
+.dropdownItemFlex {
+  display: none;
+}
+
+/******************
+INDIVIDUAL ELEMENTS
+******************/
+
+.title {
+  margin-bottom: 1em;
+  padding: 1em 1em 0 1em;
+}
+
+.socialFlex {
+  margin-bottom: 2em;
+}
+
+.instagram, .spotify {
+  margin: 0 1em;
+  color: rgb(230, 136, 115);;
+}
+
+
+
+
+.navPages{
+  margin-bottom: 1em;
+  padding-bottom: .5em;
+}
+.pageGroup {
+  margin-bottom: 1em;
+}
+
+
+.active {
+  cursor: default;
+  font-weight: 700;
+  border-bottom: 2px solid black;
+}
+
+
+
+/***********
+MEDIA QUERY
+***********/
+
+@media only screen and (min-width: 600px) {
+  .container {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .title {
+    font-size: 4rem;
+    padding: 4rem 4rem 0 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .social{
+    margin-bottom: 1.5rem;
+  }
+  
+  .navPages {
+    font-size: 1.25rem;
+  }
+  
+  .navFlex {
+    flex-direction: row;
+  }
+  
+  .pageGroup {
+    padding: 0 2rem 8rem 2rem;
+    margin-bottom: 0;
+  }
+  
+  .dropdownItemFlex {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 2.5em;
+  }
+  
+  .dropdownItemFlex a {
+    color: black;
+    padding: .5em;
+  }
+  .navPages:hover,
+.navPages:focus {
+  border-bottom: black 1px solid;
+  color: lighten(black, 50%);
+}
+
+.active {
+  font-weight: 700;
+  cursor: default;
+  border-bottom: 2px solid black;
+
+
+  &:focus {
+    border-bottom: 2px solid black;
+    color: black;
+  }
+  &:hover {
+    border-bottom: 2px solid black;
+    color: black;
+  }
+}
+}
+
+
+/****************************************
+DROPDOWN HIDE/SHOW (For big screen only) 
+****************************************/
+@media only screen and (min-width: 600px) {
+  .dropdownItemFlex {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .pageGroup:hover .dropdownItemFlex {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .pageGroup:hover .navPages {
+    border-bottom: black 2px solid;
+  }
+
+  .navPages:focus+.dropdownItemFlex {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .dropdownItemFlex a:hover {
+    background-color: darken($background-color, 20%);
+    color: black;
+    font-size: 1rem;
+  }
 }
