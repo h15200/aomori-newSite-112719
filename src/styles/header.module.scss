@@ -10,6 +10,7 @@ TYPOGRAPHY, COLOR
 ****************/
 
 .container {
+  color: $text-color;
   background-color: $background-color;
   font-family: $default-font-family;
 }
@@ -24,9 +25,13 @@ TYPOGRAPHY, COLOR
 }
 
 .navPages {
-  color: black;
+  color: $text-color;
   font-size: 1rem;
   text-transform: uppercase;
+}
+
+.dropdownItemFlex a {
+  color: $text-color;
 }
 
 
@@ -69,7 +74,7 @@ INDIVIDUAL ELEMENTS
 ******************/
 
 .title {
-  margin-bottom: 1em;
+  margin-bottom: .5em;
   padding: 1em 1em 0 1em;
 }
 
@@ -79,10 +84,12 @@ INDIVIDUAL ELEMENTS
 
 .instagram, .spotify {
   margin: 0 1em;
-  color: rgb(230, 136, 115);;
+  color: $highlight-color;
+
+  &:hover{
+    background-color:$text-color;
+  }
 }
-
-
 
 
 .navPages{
@@ -97,7 +104,7 @@ INDIVIDUAL ELEMENTS
 .active {
   cursor: default;
   font-weight: 700;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid $text-color;
 }
 
 
@@ -137,34 +144,36 @@ MEDIA QUERY
   
   .dropdownItemFlex {
     display: flex;
+    align-items: center;
     flex-direction: column;
     position: absolute;
     top: 2.5em;
+    left: 1.7em;
   }
   
   .dropdownItemFlex a {
-    color: black;
+    color: $text-color;
     padding: .5em;
   }
   .navPages:hover,
 .navPages:focus {
-  border-bottom: black 1px solid;
-  color: lighten(black, 50%);
+  border-bottom: $text-color 1px solid;
+  color: lighten($text-color, 50%);
 }
 
 .active {
   font-weight: 700;
   cursor: default;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid $text-color;
 
 
   &:focus {
-    border-bottom: 2px solid black;
-    color: black;
+    border-bottom: 2px solid $text-color;
+    color: $text-color;
   }
   &:hover {
-    border-bottom: 2px solid black;
-    color: black;
+    border-bottom: 2px solid $text-color;
+    color: $text-color;
   }
 }
 }
@@ -185,7 +194,7 @@ DROPDOWN HIDE/SHOW (For big screen only)
   }
 
   .pageGroup:hover .navPages {
-    border-bottom: black 2px solid;
+    border-bottom: $text-color 2px solid;
   }
 
   .navPages:focus+.dropdownItemFlex {
@@ -194,8 +203,8 @@ DROPDOWN HIDE/SHOW (For big screen only)
   }
 
   .dropdownItemFlex a:hover {
-    background-color: darken($background-color, 20%);
-    color: black;
+    background-color: darken($background-color, 10%);
+    color: $text-color;
     font-size: 1rem;
   }
 }
