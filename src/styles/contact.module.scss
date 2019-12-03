@@ -1,0 +1,38 @@
+@import 'config';
+
+.header{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1em 0 1em 0;
+  background-color: $highlight-color;
+}
+
+.header h2{
+  padding-top: .5em;
+}
+
+.header p {
+  padding-bottom: 1em;
+}
+
+.container {
+  background-color: $background-color;
+  padding: 3em 0 1em 0;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
+
+@media only screen and (min-width: 600px) {
+  .container {
+    padding: 3em 12em 2em 12em;
+    width: 100%;
+  }
+  .header{
+    width:100%;
+  }
+}

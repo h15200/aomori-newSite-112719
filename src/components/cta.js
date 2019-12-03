@@ -6,10 +6,16 @@ const CTA = () => {
     <div className={ctaStyles.container}>
       <h2 className={ctaStyles.header}>The Latest!!</h2>
       <p className={ctaStyles.news}>
-        Check out the latest bla bla bla. Bla and bla and bla bla bla
+        I will be playing at the Bowery Ballroom in NYC with yMusic on JANUARY 9th!
       </p>
-      <a className={ctaStyles.link} href="">
-        Click Here!
+      <p className={ctaStyles.news}>Click below to get tickets!</p>
+      <a
+        className={ctaStyles.button}
+        href="https://www.eventbrite.com/e/mark-guiliana-beat-music-ymusic-with-special-guests-tickets-78425732477"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Buy Tickets!
       </a>
     </div>
   )

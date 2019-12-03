@@ -22,25 +22,25 @@ const Header = () => (
     <nav >
       <ul className={headerStyles.navFlex}>
         <li className={headerStyles.pageGroup}>
-          <Link to="/" className={headerStyles.navPages} activeClassName={headerStyles.active}>HOME</Link>
+          <Link to="/" className={headerStyles.navPages} activeClassName={headerStyles.active}>home</Link>
         </li>
-        <li className={headerStyles.pageGroup}>
-          <Link to="/about" className={headerStyles.navPages} activeClassName={headerStyles.active}>ABOUT</Link>
+        <li className={`${headerStyles.pageGroup} ${headerStyles.dropdownPageGroup}`}>
+          <Link to="/about" className={headerStyles.navPages} activeClassName={headerStyles.active}>about</Link>
           <div className={headerStyles.dropdownItemFlex}>
-            <Link to="/about">Classical</Link>
-            <Link to="/about">Jazz</Link>
-            <Link to="/about">Film</Link>
-            <Link to="/about">yMusic</Link>
+            <Link to="/about#classical">Classical</Link>
+            <Link to="/about#jazz">Jazz</Link>
+            <Link to="/about#film">Film</Link>
+            <Link to="/about#ymusic">yMusic</Link>
           </div>
         </li>
         <li className={headerStyles.pageGroup}>
-          <Link to="/music" className={headerStyles.navPages} activeClassName={headerStyles.active}>MUSIC</Link>
+          <Link to="/music" className={headerStyles.navPages} activeClassName={headerStyles.active}>music</Link>
         </li>
-        <li className={headerStyles.pageGroup}>
-          <Link to="/services" className={headerStyles.navPages} activeClassName={headerStyles.active}>SERVICES</Link>
+        <li className={`${headerStyles.pageGroup} ${headerStyles.dropdownPageGroup}`}>
+          <Link to="/contact" className={headerStyles.navPages} activeClassName={headerStyles.active}>contact</Link>
           <div className={headerStyles.dropdownItemFlex}>
-            <Link to="/services">Studio Work</Link>
-            <Link to="/services">Education</Link>
+            <Link to="/contact#studio">Studio Work</Link>
+            <Link to="/contact#education">Education</Link>
           </div>
         </li>
       </ul>

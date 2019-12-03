@@ -1,0 +1,31 @@
+@import '../styles/config';
+
+.header{
+  background-color: $highlight-color;
+  margin: 0 auto;
+  padding: 1em 0 1em 0;
+  text-align: center;
+  width: 90%;
+}
+.container {
+  background-color: $background-color;
+  margin: 0 auto;
+  padding: 3em 0 1em 0;
+  text-align: center;
+  width: 90%;
+}
+
+
+.container p {
+  margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    padding: 3em 12em 2em 12em;
+    width: 100%;
+  }
+  .header {
+    width: 100%;
+  }
+}

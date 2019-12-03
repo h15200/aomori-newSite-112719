@@ -1,13 +1,20 @@
 @import '../styles/config';
 
 .container {
-  color: $text-color;
   background-color: $background-color;
   padding: 3em 0 1em 0;
   width: 90%;
   margin: 0 auto;
+  text-align: center;
 }
 
+.header{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1em 0 1em 0;
+  background-color: $highlight-color;
+}
 
 .videoContainer{
   position: relative;
@@ -22,7 +29,6 @@
   margin-bottom: 0;
 }
 
-
 .videoContainer iframe{
   position: absolute;
   top:0;
@@ -32,10 +38,13 @@
 }
 
 
-
 @media only screen and (min-width: 600px) {
   .container {
-    padding: 7em 12em 2em 12em;
+    padding: 3em 10vw 2em 10vw;
+    width: 100%;
+  }
+
+  .header{
     width: 100%;
   }
 
@@ -46,5 +55,10 @@
   .videoContainer:last-of-type{
     margin-bottom: 0;
   }
+}
 
+@media only screen and (min-width: 800px) {
+  .container {
+    padding: 3em 25vw 2em 25vw;
+  }
 }
