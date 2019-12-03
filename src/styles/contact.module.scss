@@ -1,29 +1,50 @@
 @import 'config';
 
-.header{
+.header {
   width: 90%;
   margin: 0 auto;
   text-align: center;
-  padding: 1em 0 1em 0;
+  padding: 1em 0 2em 0;
   background-color: $highlight-color;
+
+
+  h2 {
+    padding-top: .5em;
+    margin-bottom: .8em;
+  }
+
+  a {
+    border: $text-color 2px double;
+    border-radius: 10px;
+    color: $text-color;
+    padding: .8em;
+
+    &:hover {
+      background-color: $background-color;
+      border-radius: 0;
+      color: $text-color;
+    }
+
+  }
 }
 
-.header h2{
-  padding-top: .5em;
-}
-
-.header p {
-  padding-bottom: 1em;
-}
 
 .container {
   background-color: $background-color;
-  padding: 3em 0 1em 0;
+  padding: 3em 0 0 0;
   width: 90%;
   margin: 0 auto;
   text-align: center;
-}
 
+  h2 {
+    margin-bottom: 1.5em;
+  }
+
+  p {
+    margin-bottom: 3em;
+  }
+
+}
 
 
 
@@ -32,7 +53,8 @@
     padding: 3em 12em 2em 12em;
     width: 100%;
   }
-  .header{
-    width:100%;
+
+  .header {
+    width: 100%;
   }
 }
