@@ -18,7 +18,7 @@ const Footer = () => (
         <Link to="/music" activeClassName={footerStyles.active}>Music</Link>
       </li>
       <li>
-        <Link to="/services" activeClassName={footerStyles.active}>contact</Link>
+        <Link to="/contact" activeClassName={footerStyles.active}>contact</Link>
       </li>
       <li>
         <a

@@ -6,7 +6,7 @@ import contactStyles from "../styles/contact.module.scss"
 const ContactPage = () => (
   <Layout>
     <div className={contactStyles.header}>
-      <h2>Contact me at</h2>
+      <h2>write me at</h2>
       <a
         href="mailto:leadingtoneRecords@gmail.com"
         target="_blank"
