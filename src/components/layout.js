@@ -5,9 +5,11 @@ import "../styles/index.scss"
 import Header from "./header"
 import Footer from "./footer"
 
+import layoutStyles from '../styles/layout.module.scss'
+
 const Layout = props => (
-  <div className="container">
-    <div className="main">
+  <div className={layoutStyles.container}>
+    <div className={layoutStyles.content}>
       <Header />
       {props.children}
     </div>
