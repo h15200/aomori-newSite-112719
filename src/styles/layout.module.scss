@@ -1,16 +1,58 @@
 @import '../styles/config';
 
+// GLOBAL STYLES
+
+* {
+  box-sizing: border-box;
+  font-family: $default-font-family;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: all ease-in-out 200ms;
+}
+
+h1 {
+  color: $text-color;
+  font-family: $heading-font-family;
+  font-size: $h1-font-size;
+  font-weight: 600;
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  word-spacing: .5em;
+}
+
+h2 {
+  color: $text-color;
+  font-size: $h2-font-size;
+  text-transform: uppercase;
+  word-spacing: .2em;
+}
+
+p {
+  color: $text-color;
+  font-size: $p-font-size;
+  line-height: 1.5em;
+  word-spacing: 2px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
 
 
 // to keep footer on bottom
-.container{
-  margin: 0 auto;
+.container {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
   min-height: 100vh;
 }
 
 .content {
   flex-grow: 1;
 }
-

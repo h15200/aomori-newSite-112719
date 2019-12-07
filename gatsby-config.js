@@ -1,25 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Hideaki Aomori',
-    menuLinks: [
-      {
-        name: 'HOME',
-        link: '/'
-      },
-      {
-        name: 'ABOUT',
-        link: '/about'
-      },
-      {
-        name: 'MUSIC',
-        link: '/music'
-      },
-      {
-        name: 'SERVICES',
-        link: '/services'
-      }
-    ]
-
+    author: 'Hideaki Aomori',
+    emailContact: 'LeadingToneRecords@gmail.com'
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -38,5 +21,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'src',
+        path: `${__dirname}/src/`
+      }
+    },
+    'gatsby-transformer-remark'
   ],
 }

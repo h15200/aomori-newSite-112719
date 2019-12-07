@@ -1,0 +1,8 @@
+---
+date: 'DATE OF ENTRY'
+title: 'I will be playing at the VENUE in NYC with yMusic on JANUARY 9th!'
+footer: 'Click below to get tickets!'
+button: 'Buy Tickets!'
+---
+
+change title, footer, button and double check in development in all screen sizes
