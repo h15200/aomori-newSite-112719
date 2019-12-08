@@ -19,18 +19,34 @@
     margin-bottom: .5em;
     padding-top: .8em;
   }
-}
 
+  li {
+    margin: 1.5em;
+  }
+
+  a {
+
+    color: $text-color;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+}
 
 .container p {
   padding-bottom: 1.5em;
   text-align: left; 
+
 }
 
 @media only screen and (min-width: 600px) {
   .container {
     padding: 3em 12em 2em 12em;
     width: 100%;
+
+    a:hover {
+      background-color: $highlight-color;
+    }
+
   }
   .header {
     width: 100%;

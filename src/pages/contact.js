@@ -41,6 +41,18 @@ const ContactPage = () => {
         <div className={contactStyles.container}>
           <h2 id="studio">Studio Work</h2>
           <p>{data.allMarkdownRemark.edges[0].node.rawMarkdownBody}</p>
+          <ol className={contactStyles.list}>
+            <li><a href="https://www.youtube.com/watch?v=-9prpAv6kvo" target="_blank"
+            rel="noopener noreferrer">Clarinet, Bass Clarinet, Tenor Sax, Flute</a></li>
+            <li><a href="https://www.youtube.com/watch?v=AjjlABP5t1Q" target="_blank"
+            rel="noopener noreferrer">Clarinet, Bass Clarinet, Alto Sax</a></li>
+            <li><a href="https://www.youtube.com/watch?v=jZ8_CxmCvOs" target="_blank"
+            rel="noopener noreferrer">Clarinet and Flute</a></li>
+            <li><a href="https://www.youtube.com/watch?v=HXjFmXKEYpA" target="_blank"
+            rel="noopener noreferrer">Tenor Sax</a></li>
+            <li><a href="https://www.imdb.com/name/nm4843708/" target="_blank"
+            rel="noopener noreferrer">Film Credits</a></li>
+          </ol>
 
           <h2 id="teaching">teaching</h2>
           <p>{data.allMarkdownRemark.edges[1].node.rawMarkdownBody}</p>

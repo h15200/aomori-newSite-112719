@@ -61,8 +61,8 @@ const Header = () => {
             <div className={headerStyles.dropdownItemFlex}>
               <Link to="/about#classical">Classical</Link>
               <Link to="/about#jazz">Jazz</Link>
-              <Link to="/about#film">Film</Link>
-              <Link to="/about#ymusic">yMusic</Link>
+              <Link to="/about#commercial">Commercial Music</Link>
+              { /* <Link to="/about#ymusic">yMusic</Link> */}
             </div>
           </li>
           <li className={headerStyles.pageGroup}>

@@ -30,10 +30,40 @@ const AboutPage = () => {
           <p>{data.allMarkdownRemark.edges[1].node.rawMarkdownBody}</p>
           <h2 id="jazz">Jazz</h2>
           <p>{data.allMarkdownRemark.edges[2].node.rawMarkdownBody}</p>
-          <h2 id="film">Film and Other</h2>
+          <h2 id="commercial">Commercial Music</h2>
           <p>{data.allMarkdownRemark.edges[3].node.rawMarkdownBody}</p>
-          <h2 id="ymusic">yMusic</h2>
-          <p>{data.allMarkdownRemark.edges[4].node.rawMarkdownBody}</p>
+          <h2>Related links</h2>
+          <ul>
+            <li id="glue">
+              <a
+                href="https://hideakiaomori.bandcamp.com/releases"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Jazz Record
+              </a>
+            </li>
+            <li id="brahms">
+              <a href="http://www.msrcd.com/catalog/cd/MS1322" target="_blank" rel="noopener noreferrer">
+                Brahms Album
+              </a>
+            </li>
+            <li id="draeseke">
+              <a href="http://www.msrcd.com/catalog/cd/MS1382" target="_blank" rel="noopener noreferrer">
+                Draeseke, Mendelssohn, Burgmüller, and Beethoven
+              </a>
+            </li>
+            <li>
+              <a href="https://www.imdb.com/name/nm4843708/" target="_blank" rel="noopener noreferrer">
+                Film
+              </a>
+            </li>
+            <li>
+              <a href="https://www.ibdb.com/broadway-cast-staff/hideaki-aomori-492190#Credits" target="_blank" rel="noopener noreferrer">
+                Broadway
+              </a>
+            </li>
+          </ul>
         </div>
       </Fragment>
     </Layout>
