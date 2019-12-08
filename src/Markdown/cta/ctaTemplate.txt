@@ -1,0 +1,11 @@
+---
+date: 'DATE OF ENTRY'
+title: 'I will be playing at the VENUE in NYC with yMusic on JANUARY 9th!'
+footer: 'Click below to get tickets!'
+button: 'Buy Tickets!'
+---
+
+change date, title, footer, button and change the graphql query in CTA to the new date!
+always check in development before pushing to production!
+
+Check spelling in a separate program and paste onto body of md!
