@@ -31,9 +31,8 @@ LAYOUT
 
 .container {
   margin: 0 auto;
-
-  width: 90%;
   text-align: center;
+  width: 90%;
 }
 
 .socialFlex {
@@ -42,10 +41,10 @@ LAYOUT
 }
 
 .navFlex {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 
@@ -65,7 +64,7 @@ INDIVIDUAL ELEMENTS
 
 .title {
   margin-bottom: .5em;
-  padding: 1em 1em 0 1em;
+  padding: .5em 1em 0 1em;
 }
 
 .socialFlex {

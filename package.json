@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "hideaki-website",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Redesign of website using Gatsby",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
