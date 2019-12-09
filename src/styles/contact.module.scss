@@ -1,0 +1,91 @@
+@import 'config';
+
+.header {
+  background-color: $highlight-color;
+  margin: 0 auto;
+  padding: 1em 0 3.5em 0;
+  text-align: center;
+  width: 90%;
+
+
+  h2 {
+    padding-top: .5em;
+    margin-bottom: 1.5em;
+  }
+
+  a {
+    border: $text-color 2px double;
+    border-radius: 10px;
+    color: $text-color;
+    padding: .8em;
+
+    &:hover {
+      background-color: $background-color;
+      border-radius: 0;
+      color: $text-color;
+    }
+
+  }
+}
+
+
+.container {
+  background-color: $background-color;
+  padding: 3em 0 0 0;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 1.5em;
+  }
+
+  h2:last-of-type{
+    border-top: $text-color 1px solid;
+    padding-top: 2em;
+  }
+
+  p {
+    margin-bottom: 3em;
+    padding: 0 2em;
+    text-align: left;
+  }
+
+  p:last-of-type{
+    margin: 0;  
+    padding-bottom: 2em;
+  }
+}
+
+.list{
+
+  li{
+    margin: 1.5em;
+    padding-left: 2em;
+    text-align: left;
+  }
+
+  a{
+    color: $text-color;
+    padding: 1em;
+  }
+}
+
+
+
+@media only screen and (min-width: 786px) {
+  .container {
+    padding: 3em 12em 2em 12em;
+    width: 100%;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .list{
+    a:hover{
+      background-color: darken($background-color, 10%);
+    }
+  }
+}

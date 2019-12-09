@@ -1,0 +1,65 @@
+@import '../styles/config';
+
+.container {
+  background-color: $background-color;
+  padding: 3em 0 1em 0;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1em 0 1em 0;
+  background-color: $highlight-color;
+}
+
+.videoContainer{
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 35px;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+
+.videoContainer:last-of-type{
+  margin-bottom: 0;
+}
+
+.videoContainer iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+@media only screen and (min-width: 786px) {
+  .container {
+    padding: 3em 10vw 2em 10vw;
+    width: 100%;
+  }
+
+  .header{
+    width: 100%;
+    padding: 2em 0 2em 0;
+  }
+
+  .videoContainer{
+    margin-bottom: 3.5em;
+  }
+
+  .videoContainer:last-of-type{
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .container {
+    padding: 3em 25vw 2em 25vw;
+  }
+}
