@@ -1,6 +1,7 @@
 import React, { Fragment } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
+import Head from '../components/head'
 import contactStyles from "../styles/contact.module.scss"
 
 const ContactPage = () => {
@@ -28,6 +29,7 @@ const ContactPage = () => {
   return (
     <Layout>
       <Fragment>
+        <Head title='Contact'/>
         <div className={contactStyles.header}>
           <h2>write me at</h2>
           <a

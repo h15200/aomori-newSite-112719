@@ -28,6 +28,8 @@ module.exports = {
         path: `${__dirname}/src/Markdown/`
       }
     },
-    'gatsby-transformer-remark'
+    'gatsby-transformer-remark',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-favicon'
   ],
 }

@@ -1,10 +1,12 @@
 import React, { Fragment } from "react"
 import Layout from "../components/layout"
+import Head from '../components/head'
 import musicStyles from "../styles/music.module.scss"
 
 const MusicPage = () => (
   <Layout>
     <Fragment>
+      <Head title='Music'/>
       <h2 className={musicStyles.header}> LISTEN / WATCH</h2>
 
       <div className={musicStyles.container}>
