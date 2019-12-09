@@ -1,0 +1,203 @@
+@import '../styles/config';
+
+/*********
+VARIABLES - _config.scss 
+*********/
+
+
+/****************
+TYPOGRAPHY, COLOR
+****************/
+
+.container {
+  background-color: $background-color;
+}
+
+
+.navPages {
+  color: $text-color;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.dropdownItemFlex a {
+  color: $text-color;
+}
+
+
+/**********
+LAYOUT
+**********/
+
+.container {
+  margin: 0 auto;
+
+  width: 90%;
+  text-align: center;
+}
+
+.socialFlex {
+  display: flex;
+  justify-content: center;
+}
+
+.navFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.pageGroup {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.dropdownItemFlex {
+  display: none;
+}
+
+/******************
+INDIVIDUAL ELEMENTS
+******************/
+
+.title {
+  margin-bottom: .5em;
+  padding: 1em 1em 0 1em;
+}
+
+.socialFlex {
+  margin-bottom: 2em;
+}
+
+.instagram,
+.spotify {
+  margin: 0 1em;
+  color: $highlight-color;
+
+  &:hover {
+    background-color: $text-color;
+  }
+}
+
+
+.navPages {
+  margin-bottom: 1em;
+  padding-bottom: .5em;
+}
+
+.pageGroup {
+  margin-bottom: 1em;
+}
+
+
+.active {
+  cursor: default;
+  font-weight: 700;
+  border-bottom: 2px solid $text-color;
+}
+
+
+
+/***********
+MEDIA QUERY
+***********/
+
+@media only screen and (min-width: 786px) {
+  .container {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 4rem;
+    padding: 4rem 4rem 0 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .social {
+    margin-bottom: 1.5rem;
+  }
+
+  .navPages {
+    font-size: 1.25rem;
+  }
+
+  .navFlex {
+    flex-direction: row;
+  }
+// the third padding value for dropdown separation
+  .pageGroup {
+    padding: 0 2rem 6.5rem 2rem;
+    margin-bottom: 0;
+  }
+
+  .dropdownItemFlex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 2.5em;
+    left: 1.7em;
+  }
+
+  .dropdownItemFlex a {
+    color: $text-color;
+    padding: .5em;
+  }
+
+  .navPages:hover,
+  .navPages:focus {
+    border-bottom: $text-color 1px solid;
+    color: lighten($text-color, 30%);
+  }
+
+  .active {
+    font-weight: 700;
+    cursor: default;
+    border-bottom: 2px solid $text-color;
+
+
+    &:focus {
+      border-bottom: 2px solid $text-color;
+      color: $text-color;
+    }
+
+    &:hover {
+      border-bottom: 2px solid $text-color;
+      color: $text-color;
+    }
+  }
+}
+
+
+/****************************************
+DROPDOWN HIDE/SHOW (For big screen only) 
+****************************************/
+@media only screen and (min-width: 786px) {
+  .dropdownItemFlex {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .pageGroup:hover .dropdownItemFlex {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navPages:focus+.dropdownItemFlex {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .dropdownPageGroup:hover .navPages {
+    border-bottom: $text-color 2px solid;
+  }
+
+  .dropdownItemFlex a:hover {
+    background-color: darken($background-color, 10%);
+    color: $text-color;
+    font-size: 1rem;
+  }
+}

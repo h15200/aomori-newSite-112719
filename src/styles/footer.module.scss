@@ -1,0 +1,55 @@
+@import '../styles/config';
+
+*// Decided no full footer for mobile, but the stylings are written in the small device main section
+
+.container {
+  padding: 1em 0;
+  background-color: $background-color;
+  font-family: $default-font-family;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 600px;
+}
+
+
+.flex{
+  display: flex;
+  justify-content: center;
+}
+
+.flex li a{
+  color: $text-color;
+  display: none;
+  margin: 1em;
+  padding-bottom: .5em;
+  text-transform: uppercase;
+}
+
+.active {
+  cursor: default;
+  font-weight: 700;
+  border-bottom: 2px solid $text-color;
+}
+
+
+.credit {
+  font-size: .7rem;
+  text-align: center;
+  padding: 1.5em;
+  letter-spacing: .5px;
+  word-spacing: 1px;
+}
+
+@media only screen and (min-width: 786px) {
+  .container {
+    max-width: 100%;
+    width: 100%;
+    padding-bottom: .5em;
+  }
+  .flex li a{
+    display: block;
+  }
+  .credit{
+    font-size: .8rem;
+  }
+}
