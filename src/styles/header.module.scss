@@ -105,7 +105,7 @@ INDIVIDUAL ELEMENTS
 MEDIA QUERY
 ***********/
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 786px) {
   .container {
     width: 100%;
   }
@@ -175,7 +175,7 @@ MEDIA QUERY
 /****************************************
 DROPDOWN HIDE/SHOW (For big screen only) 
 ****************************************/
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 786px) {
   .dropdownItemFlex {
     opacity: 0;
     pointer-events: none;

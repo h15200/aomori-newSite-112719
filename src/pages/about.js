@@ -50,7 +50,7 @@ const AboutPage = () => {
             </li>
             <li id="draeseke">
               <a href="http://www.msrcd.com/catalog/cd/MS1382" target="_blank" rel="noopener noreferrer">
-                Draeseke, Mendelssohn, Burgmüller, and Beethoven
+                Draeseke and Mendelssohn 
               </a>
             </li>
             <li>
