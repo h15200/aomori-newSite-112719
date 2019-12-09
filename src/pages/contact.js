@@ -43,9 +43,9 @@ const ContactPage = () => {
           <p>{data.allMarkdownRemark.edges[0].node.rawMarkdownBody}</p>
           <ol className={contactStyles.list}>
             <li><a href="https://www.youtube.com/watch?v=-9prpAv6kvo" target="_blank"
-            rel="noopener noreferrer">Clarinet, Bass Clarinet, Tenor Sax, Flute</a></li>
+            rel="noopener noreferrer">Clarinet, Bass Cl., Sax, Flute</a></li>
             <li><a href="https://www.youtube.com/watch?v=AjjlABP5t1Q" target="_blank"
-            rel="noopener noreferrer">Clarinet, Bass Clarinet, Alto Sax</a></li>
+            rel="noopener noreferrer">Clarinet, Bass Cl., Sax</a></li>
             <li><a href="https://www.youtube.com/watch?v=jZ8_CxmCvOs" target="_blank"
             rel="noopener noreferrer">Clarinet and Flute</a></li>
             <li><a href="https://www.youtube.com/watch?v=HXjFmXKEYpA" target="_blank"
