@@ -1,5 +1,1 @@
-Finish layout for all pages
-
-Swap out hardcoded things with metadata entered in gatsby-config, then fetch through graphql 
-
-Have instructions for entering each element (color, typography, CTA, video)
+To change CTA, src/Markdown/cta and read the template for instructions
