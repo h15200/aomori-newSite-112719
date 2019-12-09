@@ -43,6 +43,7 @@ const ContactPage = () => {
         <div className={contactStyles.container}>
           <h2 id="studio">Studio Work</h2>
           <p>{data.allMarkdownRemark.edges[0].node.rawMarkdownBody}</p>
+          <p> Previous projects by instrument:</p>
           <ol className={contactStyles.list}>
             <li><a href="https://www.youtube.com/watch?v=-9prpAv6kvo" target="_blank"
             rel="noopener noreferrer">Clarinet, Bass Cl., Sax, Flute</a></li>
