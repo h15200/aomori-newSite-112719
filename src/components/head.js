@@ -16,6 +16,7 @@ const Head = ({ title }) => {
   return (
     <Helmet>
       <title>{`${title} | ${data.site.siteMetadata.title}`}</title>
+      <meta charSet="utf-8" />
     </Helmet>
   )
 }

@@ -12,6 +12,7 @@ const MusicPage = () => (
       <div className={musicStyles.container}>
         <div className={musicStyles.videoContainer}>
           <iframe
+            title="Performance of Eleven by yMusic"
             width="560"
             height="315"
             src="https://www.youtube-nocookie.com/embed/zssRyKHDduQ"
@@ -22,6 +23,7 @@ const MusicPage = () => (
         </div>
         <div className={musicStyles.videoContainer}>
           <iframe
+            title="Audio of NY Jazz Expressway Live at Tokyo 2014"
             width="560"
             height="315"
             src="https://www.youtube-nocookie.com/embed/PoUEhH6rm_g"
@@ -32,6 +34,7 @@ const MusicPage = () => (
         </div>
         <div className={musicStyles.videoContainer}>
           <iframe
+            title="Audio of John Legend and yMusic"
             width="560"
             height="315"
             src="https://www.youtube-nocookie.com/embed/7R7kPZF8wRA"
@@ -42,6 +45,7 @@ const MusicPage = () => (
         </div>
         <div className={musicStyles.videoContainer}>
           <iframe
+            title="Live Recording of Steven's Last Night in Town with Ben Folds"
             width="560"
             height="315"
             src="https://www.youtube-nocookie.com/embed/uG0LqKNTohk"
@@ -53,6 +57,7 @@ const MusicPage = () => (
 
         <div className={musicStyles.videoContainer}>
           <iframe
+            title="Audio of Can't Run But with Paul Simon"
             width="560"
             height="315"
             src="https://www.youtube-nocookie.com/embed/34DL0Ai4OZ8"
@@ -63,6 +68,7 @@ const MusicPage = () => (
         </div>
         <div className={musicStyles.videoContainer}>
           <iframe
+            title="Music video of Dream State by Son Lux"
             width="560"
             height="315"
             src="https://www.youtube-nocookie.com/embed/AjjlABP5t1Q"

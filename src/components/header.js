@@ -20,6 +20,7 @@ const Header = () => {
       <h1 className={headerStyles.title}>{data.site.siteMetadata.title}</h1>
       <div className={headerStyles.socialFlex}>
         <a
+          title="Spotify"
           href="https://open.spotify.com/artist/5oPv8Zdj5jxwxGXlzacP7d"
           target="_blank"
           rel="noopener noreferrer"
@@ -28,6 +29,7 @@ const Header = () => {
           <FontAwesomeIcon icon={faSpotify} size="3x" />
         </a>
         <a
+          title="Instagram"
           href="https://www.instagram.com/h.aomori/"
           target="_blank"
           rel="noopener noreferrer"

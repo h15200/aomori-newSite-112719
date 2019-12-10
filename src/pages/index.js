@@ -14,6 +14,7 @@ const IndexPage = () => (
       <div className={indexStyles.container}>
         <div className={indexStyles.videoContainer}>
           <iframe
+            title="Saturday Night Live performance"
             width="560"
             height="315"
             src="https://www.youtube-nocookie.com/embed/hGDdX-yV3dQ"
@@ -24,6 +25,7 @@ const IndexPage = () => (
         </div>
         <div className={indexStyles.videoContainer}>
           <iframe
+            title="Live recording with the funk band, Scary Pockets"
             width="560"
             height="315"
             src="https://www.youtube-nocookie.com/embed/BtVT7dtWomM"
