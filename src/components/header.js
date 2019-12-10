@@ -58,11 +58,10 @@ const Header = () => {
             >
               about
             </Link>
-            <div className={headerStyles.dropdownItemFlex}>
+            <div className={`${headerStyles.dropdownItemFlex} ${headerStyles.aboutDrop}`}>
               <Link to="/about#classical">Classical</Link>
               <Link to="/about#jazz">Jazz</Link>
               <Link to="/about#commercial">Commercial Music</Link>
-              { /* <Link to="/about#ymusic">yMusic</Link> */}
             </div>
           </li>
           <li className={headerStyles.pageGroup}>
@@ -84,7 +83,7 @@ const Header = () => {
             >
               contact
             </Link>
-            <div className={headerStyles.dropdownItemFlex}>
+            <div className={`${headerStyles.dropdownItemFlex} ${headerStyles.contactDrop}`}>
               <Link to="/contact#studio">Studio Work</Link>
               <Link to="/contact#teaching">Teaching</Link>
             </div>

@@ -3,13 +3,11 @@
 .container {
   background-color: $background-color;
   padding: 3em 0 1em 0;
-  width: 90%;
   margin: 0 auto;
   text-align: center;
 }
 
 .header{
-  width: 90%;
   margin: 0 auto;
   text-align: center;
   padding: 1em 0 1em 0;
@@ -41,11 +39,9 @@
 @media only screen and (min-width: 786px) {
   .container {
     padding: 3em 10vw 2em 10vw;
-    width: 100%;
   }
 
   .header{
-    width: 100%;
     padding: 2em 0 2em 0;
   }
 
