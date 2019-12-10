@@ -30,6 +30,12 @@ module.exports = {
     },
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-favicon'
+    'gatsby-plugin-favicon',
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en'
+      }
+    }
   ],
 }
