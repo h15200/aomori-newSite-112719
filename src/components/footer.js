@@ -40,6 +40,7 @@ const Footer = () => {
         </li>
         <li>
           <a
+            title="Spotify"
             href="https://open.spotify.com/artist/5oPv8Zdj5jxwxGXlzacP7d"
             target="_blank"
             rel="noopener noreferrer"
@@ -50,6 +51,7 @@ const Footer = () => {
         </li>
         <li>
           <a
+            title="Instagram"
             href="https://www.instagram.com/h.aomori/"
             target="_blank"
             rel="noopener noreferrer"
