@@ -3,12 +3,9 @@
 *// Decided no full footer for mobile, but the stylings are written in the small device main section
 
 .container {
-  padding: 1em 0;
   background-color: $background-color;
   font-family: $default-font-family;
-  margin: 0 auto;
-  width: 90%;
-  max-width: 600px;
+  padding: 1em 0;
 }
 
 
@@ -27,23 +24,21 @@
 
 .active {
   cursor: default;
-  font-weight: 700;
   border-bottom: 2px solid $text-color;
+  font-weight: 700;
 }
 
 
 .credit {
   font-size: .7rem;
-  text-align: center;
-  padding: 1.5em;
   letter-spacing: .5px;
+  padding: 1.5em;
+  text-align: center;
   word-spacing: 1px;
 }
 
 @media only screen and (min-width: 786px) {
   .container {
-    max-width: 100%;
-    width: 100%;
     padding-bottom: .5em;
   }
   .flex li a{

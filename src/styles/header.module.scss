@@ -32,7 +32,6 @@ LAYOUT
 .container {
   margin: 0 auto;
   text-align: center;
-  width: 90%;
 }
 
 .socialFlex {
@@ -99,15 +98,11 @@ INDIVIDUAL ELEMENTS
 }
 
 
-
 /***********
 MEDIA QUERY
 ***********/
 
 @media only screen and (min-width: 786px) {
-  .container {
-    width: 100%;
-  }
 
   .title {
     font-size: 4rem;
@@ -121,6 +116,7 @@ MEDIA QUERY
 
   .navPages {
     font-size: 1.25rem;
+    border-bottom: 2px solid transparent;
   }
 
   .navFlex {
@@ -132,23 +128,34 @@ MEDIA QUERY
     margin-bottom: 0;
   }
 
-  .dropdownItemFlex {
+  .dropdownItemFlex{
     display: flex;
-    align-items: center;
     flex-direction: column;
     position: absolute;
+  }
+
+  .aboutDrop {
     top: 2.5em;
-    left: 1.7em;
+    left: .85em;
+    width: 80%;
+
+  }
+  .contactDrop{
+    top: 2.5em;
+    left: 1.6em;
   }
 
   .dropdownItemFlex a {
     color: $text-color;
     padding: .5em;
+    text-align: center;
   }
+
+  
 
   .navPages:hover,
   .navPages:focus {
-    border-bottom: $text-color 1px solid;
+    border-bottom: $text-color 2px solid;
     color: lighten($text-color, 30%);
   }
 
