@@ -89,6 +89,15 @@ const AboutPage = () => {
             </li>
             <li>
               <a
+                href="https://www.ymusicensemble.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                yMusic
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://www.imdb.com/name/nm4843708/"
                 target="_blank"
                 rel="noopener noreferrer"
