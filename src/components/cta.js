@@ -5,7 +5,7 @@ import ctaStyles from "../styles/cta.module.scss"
 const CTA = () => {
   const data = useStaticQuery(graphql`
 query {
-  markdownRemark(frontmatter: { date: { eq: "12-12-19" } }){
+  markdownRemark(frontmatter: { date: { eq: "01-09-20" } }){
     frontmatter{
       date
       title
@@ -24,7 +24,7 @@ query {
       <p className={ctaStyles.news}>{data.markdownRemark.frontmatter.footer}</p>
       <a
         className={ctaStyles.button}
-        href="https://www.eventbrite.com/e/mark-guiliana-beat-music-ymusic-with-special-guests-tickets-78425732477"
+        href="http://www.brucehornsby.com/news-2/2019/10/11/bruce-hornsby-and-ymusic-announce"
         target="_blank"
         rel="noopener noreferrer"
       >
