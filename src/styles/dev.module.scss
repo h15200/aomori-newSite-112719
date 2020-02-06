@@ -1,0 +1,14 @@
+$color-grey-dark-1: rgb(85, 85, 85);
+
+.devPage {
+  background-color: $color-grey-dark-1;
+
+  // for now
+  height: 100vh;
+}
+
+.container {
+  max-width: 65rem;
+  margin: 0 auto;
+  background-color: white;
+}
