@@ -30,10 +30,11 @@
   margin-bottom: 2em;
   padding: 1.2em;
   transition: all 0.3s ease 0s;
-    &:hover{
+    &:hover, &:focus {
       background-color: darken($background-color, 10%);
       border-radius: 50px;
       transition: all 0.3s ease 0s;
+      outline: none;
     }
 }
 

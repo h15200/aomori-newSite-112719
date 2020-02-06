@@ -75,8 +75,14 @@ INDIVIDUAL ELEMENTS
   margin: 0 1em;
   color: $highlight-color;
 
-  &:hover {
-    background-color: $text-color;
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: darken($background-color, 15%);
+  }
+
+  &:active {
+    background-color: $background-color;
   }
 }
 
@@ -157,6 +163,11 @@ MEDIA QUERY
   .navPages:focus {
     border-bottom: $text-color 2px solid;
     color: lighten($text-color, 30%);
+    outline: none;
+  }
+
+  .navPages:active {
+    color: $text-color;
   }
 
   .active {
@@ -187,7 +198,8 @@ DROPDOWN HIDE/SHOW (For big screen only)
     pointer-events: none;
   }
 
-  .pageGroup:hover .dropdownItemFlex {
+  .pageGroup:hover .dropdownItemFlex,
+  .pageGroup:focus .dropdownItemFlex {
     opacity: 1;
     pointer-events: auto;
   }
@@ -206,4 +218,15 @@ DROPDOWN HIDE/SHOW (For big screen only)
     color: $text-color;
     font-size: 1rem;
   }
+
+  .dropdownItemFlex a:focus {
+    outline: none;
+    opacity: 1;
+  }
+
+  .dropdownItemFlex a:active {
+    background: darken($background-color, 5%);
+  }
+
+
 }
