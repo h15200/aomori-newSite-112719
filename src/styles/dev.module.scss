@@ -1,14 +1,54 @@
+$color-brown: #634444;
+$color-yellow: #E9F5C5;
+// $color-blue:
 $color-grey-dark-1: rgb(85, 85, 85);
+$color-grey-light-1: #ccc;
+
+
+// contrast color for music site is #f7ede4
+// for steve site it is #4f7476
+
 
 .devPage {
-  background-color: $color-grey-dark-1;
-
-  // for now
-  height: 100vh;
+  background: $color-brown;
+  // margin: 1rem;
 }
+
 
 .container {
   max-width: 65rem;
   margin: 0 auto;
-  background-color: white;
+
+  &___header {
+
+  }
+
+  &___skills {
+
+  }
+
+  &___projects {
+
+  }
+
+  &___footer {
+    
+  }
+}
+
+.header {
+
+}
+
+
+.skills {
+
+}
+
+.projects {
+background: $color-yellow;
+}
+
+.footer {
+
 }

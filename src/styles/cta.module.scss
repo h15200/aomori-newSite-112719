@@ -36,6 +36,11 @@
       transition: all 0.3s ease 0s;
       outline: none;
     }
+
+    &:active {
+      background-color: $highlight-color;
+      color: $background-color;
+    }
 }
 
 
