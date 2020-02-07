@@ -1,5 +1,5 @@
 /* eslint-disable arrow-body-style */
-import React, { Fragment } from "react"
+import React from "react"
 import devStyles from "../styles/dev.module.scss"
 
 const Dev = () => {
