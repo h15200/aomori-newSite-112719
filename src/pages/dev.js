@@ -1,7 +1,9 @@
 /* eslint-disable arrow-body-style */
 import React, { Fragment } from "react"
 import { Helmet } from 'react-helmet'
+import faviconDev from '../image/faviconDev.ico'
 import devStyles from "../styles/dev.module.scss"
+
 
 
 const Dev = () => {
@@ -10,6 +12,7 @@ const Dev = () => {
       <Helmet>
         <title>Webdev & Design</title>
       <meta charSet="utf-8" name="description" content="Hideaki Aomori - Web devloper and designer"/>
+      <link rel="shortcut icon" type="image/ico" href={faviconDev} />
       </Helmet>
       <div className={devStyles.devPage}>
 
