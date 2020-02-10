@@ -1,12 +1,25 @@
 /* eslint-disable arrow-body-style */
 import React, { Fragment } from "react"
 import { Helmet } from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
+
 import faviconDev from '../image/faviconDev.ico'
 import devStyles from "../styles/dev.module.scss"
 
 
 
 const Dev = () => {
+  const data = useStaticQuery(graphql`
+        query {
+          headshot: file(relativePath: { eq: "headshot.jpg"}) {
+        childImageSharp {
+          fluid (maxWidth:100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+`)
   return (
     <Fragment>
       <Helmet>
@@ -18,7 +31,12 @@ const Dev = () => {
 
         <header className={devStyles.header}>
           <div className={`${devStyles.container} ${devStyles.container___header}`}>
-            Header
+            <nav className={devStyles.nav}>
+              <ul className={devStyles.nav_ul}>
+                <li className={`${devStyles.nav_li} ${devStyles.nav_li___1}`}><a className={`${devStyles.nav_link} ${devStyles.nav_link___1}`} href="#projects">projects</a></li>
+                <li className={`${devStyles.nav_li} ${devStyles.nav_li___2}`}><a className={`${devStyles.nav_link} ${devStyles.nav_link___2}`} href="#contact">contact</a></li>
+              </ul>
+            </nav>
           </div>
         </header>
 
@@ -30,14 +48,14 @@ const Dev = () => {
           </div>
         </section>
 
-        <section className={devStyles.projects}>
+        <section className={devStyles.projects} id="projects">
           <div
             className={`${devStyles.container} ${devStyles.container___projects}`}
           >
             Projects
           </div>
         </section>
-        <footer className={devStyles.contact}>
+        <footer className={devStyles.contact} id="contact">
           <div
             className={`${devStyles.container} ${devStyles.container___footer}`}
           >

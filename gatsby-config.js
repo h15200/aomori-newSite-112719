@@ -19,6 +19,10 @@ module.exports = {
             family: `Ubuntu`,
             variants: [`400`, `500`, `700`],
           },
+          {
+            family: 'Roboto',
+            variants: ['400', '500', '600', '700'],
+          },
         ],
       },
     },
@@ -38,6 +42,8 @@ module.exports = {
         lang: 'en'
       }
     },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
