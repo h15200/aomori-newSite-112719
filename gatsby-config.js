@@ -33,6 +33,13 @@ module.exports = {
         path: `${__dirname}/src/Markdown/`
       }
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/image/`
+      }
+    },
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-favicon',
