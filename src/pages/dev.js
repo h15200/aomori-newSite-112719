@@ -56,17 +56,20 @@ const Dev = () => {
               </ul>
             </nav>
             <div className={devStyles.intro}>
-              <h1 className={devStyles.intro_header_1}>Hideaki Aomori</h1>
-              <p className={devStyles.intro_description}>
-                web developer and designer
-              </p>
+              <div className={devStyles.intro_text}>
+                <h1 className={devStyles.intro_header_1}>Hideaki Aomori</h1>
+                <p className={devStyles.intro_description}>
+                  web developer and designer
+                </p>
+              </div>
+
               <Img
                 fluid={data.headshot.childImageSharp.fluid}
                 className={devStyles.intro_img}
               />
             </div>
             <div className={`${devStyles.skills} `}>
-              <div className={devStyles.skills_header_2}>Skills</div>
+              <div className={devStyles.skills_header_2}>Skills:</div>
               <ul className={devStyles.skills_list}>
                 <li className={devStyles.skills_item}>html</li>
                 <li className={devStyles.skills_item}>css</li>
@@ -80,13 +83,14 @@ const Dev = () => {
           </div>
         </header>
 
-
-        
         <section className={devStyles.projects} id="projects">
           <div
             className={`${devStyles.container} ${devStyles.container___projects}`}
           >
-            Projects
+            <h2 className={devStyles.projects_header_2}>Recent Projects</h2>
+            <div className={`${devStyles.card}`}>
+            
+            </div>
           </div>
         </section>
         <footer className={devStyles.contact} id="contact">
