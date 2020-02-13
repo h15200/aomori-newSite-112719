@@ -6,6 +6,7 @@ $color-grey-dark-2: rgb(45,45,45);
 $color-grey-dark-3: rgb(25,25,25);
 
 $color-grey-light-1: #e2e2e2;
+$color-grey-light-2: #c4c4c4;
 
 $color-card-brown: #a47682;
 $color-card-blue: #5fb0d2;
@@ -38,7 +39,7 @@ $font-dev: 'Roboto', sans-serif;
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: scale(0.4);
+    transform: scale(0.8);
   }
 
   to {
@@ -53,7 +54,7 @@ $font-dev: 'Roboto', sans-serif;
   }
 
   50% {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   100% {
@@ -62,10 +63,12 @@ $font-dev: 'Roboto', sans-serif;
 }
 
 
-
+///////////////////
+///LAYOUT and CONTAINER
+//////////////////////
 
 .devPage {
-  background: $color-brown;
+  background-image: linear-gradient(to bottom right,lighten($color-brown, 20%), $color-brown ); 
 }
 
 
@@ -74,17 +77,6 @@ $font-dev: 'Roboto', sans-serif;
   max-width: 65rem;
   margin: 0 auto;
 
-  &___skills {
-
-  }
-
-  &___projects {
-
-  }
-
-  &___footer {
-    
-  }
 }
 
 ///////////
@@ -215,7 +207,9 @@ $font-dev: 'Roboto', sans-serif;
   }
 }
 
-
+////////////
+//SKILLS
+////////////
 
 
 .skills {
@@ -240,7 +234,7 @@ $font-dev: 'Roboto', sans-serif;
 
 
     &:hover {
-      animation: pulsate 1s infinite ease-in-out;
+      animation: pulsate 1.2s infinite ease-in-out;
     }
 
     &:hover ~ ul {
@@ -265,23 +259,29 @@ $font-dev: 'Roboto', sans-serif;
       margin-bottom: .3rem;
     }
   }
-
 }
+
+///////////
+//PROJECTS
+//////////
 
 .projects {
 background: $color-yellow;
+padding-top: 10rem; // works like margin top because of overlap
 
 height: 100vh; //dev 
 clip-path: polygon(0 35%, 100% 0, 100% 65%, 0 100%);
 
 
 &_header_2 {
-  transform: translateY(15rem);
+  
   text-align: center;
   color: $color-brown;
 }
 
 }
+
+
 
 
 
