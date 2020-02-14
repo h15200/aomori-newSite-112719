@@ -27,7 +27,7 @@ const Dev = () => {
   const currentYear = new Date().getFullYear()
   const data = useStaticQuery(graphql`
     query {
-      headshot: file(relativePath: { eq: "headshot.jpg" }) {
+      h_pic: file(relativePath: { eq: "headshot.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 100) {
             ...GatsbyImageSharpFluid
@@ -93,12 +93,10 @@ const Dev = () => {
                   web developer and designer
                 </p>
               </div>
-  { /*
               <Img
-                fluid={data.headshot.childImageSharp.fluid}
+                fluid={data.h_pic.childImageSharp.fluid}
                 className={devStyles.intro_img}
               />
-  */ }
             </div>
             <div className={`${devStyles.skills} `}>
               <h2 className={devStyles.skills_header_2}>Skills:</h2>
@@ -189,10 +187,10 @@ const Dev = () => {
             <h2 className={devStyles.projects_header_2}>Recent Projects</h2>
             <div className={devStyles.card_container}>
               <div className={`${devStyles.card} ${devStyles.card___steve}`}>
-               { /* <Img
+                <Img
                   fluid={data.steve_fav.childImageSharp.fluid}
                   className={devStyles.card_icon}
-               />  */}
+               />
                 <p className={devStyles.card_description}>
                   Custom portfolio site built on Gatsby
                 </p>
