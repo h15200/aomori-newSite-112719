@@ -93,11 +93,12 @@ const Dev = () => {
                   web developer and designer
                 </p>
               </div>
-
+  { /*
               <Img
                 fluid={data.headshot.childImageSharp.fluid}
                 className={devStyles.intro_img}
               />
+  */ }
             </div>
             <div className={`${devStyles.skills} `}>
               <h2 className={devStyles.skills_header_2}>Skills:</h2>
@@ -188,10 +189,10 @@ const Dev = () => {
             <h2 className={devStyles.projects_header_2}>Recent Projects</h2>
             <div className={devStyles.card_container}>
               <div className={`${devStyles.card} ${devStyles.card___steve}`}>
-                <Img
+               { /* <Img
                   fluid={data.steve_fav.childImageSharp.fluid}
                   className={devStyles.card_icon}
-                />
+               />  */}
                 <p className={devStyles.card_description}>
                   Custom portfolio site built on Gatsby
                 </p>
