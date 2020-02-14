@@ -19,6 +19,10 @@ module.exports = {
             family: `Ubuntu`,
             variants: [`400`, `500`, `700`],
           },
+          {
+            family: 'Roboto',
+            variants: ['400', '500', '600', '700'],
+          },
         ],
       },
     },
@@ -27,6 +31,13 @@ module.exports = {
       options: {
         name: 'src',
         path: `${__dirname}/src/Markdown/`
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/image/`
       }
     },
     'gatsby-transformer-remark',
@@ -38,6 +49,8 @@ module.exports = {
         lang: 'en'
       }
     },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -62,7 +75,7 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /images/
+          include: /svg/
         }
       }
     },

@@ -1,54 +1,497 @@
 $color-brown: #634444;
 $color-yellow: #E9F5C5;
-// $color-blue:
+
 $color-grey-dark-1: rgb(85, 85, 85);
-$color-grey-light-1: #ccc;
+$color-grey-dark-2: rgb(45,45,45);
+$color-grey-dark-3: rgb(25,25,25);
+
+$color-grey-light-1: #e2e2e2;
+$color-grey-light-2: #c4c4c4;
+
+$color-card-brown: #a47682;
+$color-card-blue: #5fb0d2;
+$color-card-green: #47AE88;
+$color-card-orange: #FFAC61;
+
+$color-steve: #4f7476;
+$color-hideaki: #EF9783;
+
+$font-dev: 'Roboto', sans-serif;
 
 
-// contrast color for music site is #f7ede4
-// for steve site it is #4f7476
 
+
+@keyframes fromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  85% {
+    opacity: 0.8;
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    // transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    // transform: scale(1);
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+///////////////////
+///LAYOUT and CONTAINER
+//////////////////////
 
 .devPage {
-  background: $color-brown;
-  // margin: 1rem;
+  background-image: linear-gradient(to bottom right,lighten($color-brown, 20%), $color-brown ); 
 }
 
 
 .container {
+  font-family: $font-dev;
   max-width: 65rem;
   margin: 0 auto;
 
-  &___header {
+}
+
+///////////
+// NAVIGATION
+////////////
+
+.nav {
+    padding: 2rem;
+    margin-bottom: 1rem;
+
+    &_ul {
+      padding: 1rem;
+
+      display: grid;
+      grid-template-columns: 1fr repeat(2, min-content);
+      column-gap: 2rem;
+    }
+
+    &_li {
+      position: relative;
+
+      &___1 {
+        grid-column: 2 / 3;
+      }
+
+    }
+
+    &_link {
+
+      &:link,
+      &:visited {
+        padding: 1rem;
+        text-transform: lowercase;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: $font-dev;
+        transition: all .3s;
+
+        border-bottom: 1px transparent solid;
+      }
+
+
+      &:hover,
+      &:focus {
+        outline: none;
+      }
+
+
+      &___1 {
+        &:link,
+        &:visited {
+          color: $color-grey-light-1;
+        }
+
+        &:hover, 
+        &:focus {
+          border-bottom: 1px $color-grey-light-1 solid;
+        }
+
+        &:active {
+          border-bottom: 3px $color-grey-light-1 solid;
+        }
+      }
+
+        &___2 {
+          &:link,
+          &:visited {
+            background: $color-yellow;
+            color: $color-brown;
+          }
+
+          &:focus, 
+          &:hover {
+            background-color: $color-card-green;
+            color: $color-grey-dark-2;
+          }
+
+          &:active {
+            background: lighten($color-card-green, 15%);
+            color: $color-grey-dark-3;
+          }
+        }
+      }
+    }
+
+////////////
+//INTRO
+/////////////
+
+.intro {
+  text-align: center;
+  font-family: $font-dev;
+
+  display: grid;
+  grid-template-columns: max-content min-content;
+  column-gap: 3rem;
+  justify-content: center;
+
+  margin-bottom: 8rem;  
+
+  &_header_1 {
+    font-family: inherit;
+    font-size: 4rem;
+    word-spacing: 4px;
+    color: $color-yellow;
+    margin-bottom: 1rem;
+    font-weight: 500;
+
+    animation: fromLeft 1.3s ease-out;
 
   }
 
-  &___skills {
+  &_description {
+    font-family: inherit;
+    color: $color-grey-light-1;
 
+    text-align: right;
+
+    animation: fadeIn 1.5s ease-in;
   }
 
-  &___projects {
+  &_img {
+    margin: 0 auto;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
 
-  }
-
-  &___footer {
-    
   }
 }
 
-.header {
-
-}
+////////////
+//SKILLS
+////////////
 
 
 .skills {
+  color: $color-grey-light-1;
+  padding-bottom: 12rem; // for overlap
+  margin-bottom: -12rem; 
 
+  &:hover > h2 {
+    animation: pulsate 1.2s infinite ease-in-out;
+  }
+
+  &:hover > ul {
+    background: darken($color-brown, 15%);
+    border: $color-grey-light-1 2px solid;
+  }
+
+  &_header_2 {
+    text-align: center;
+    color: $color-grey-light-1;
+    font-weight: 500;
+    font-size: 2rem;
+    font-family: $font-dev;
+    text-transform: uppercase;
+
+    margin-bottom: 1rem;
+  }
+
+  &_list {
+    padding: 1rem;
+    border: 2px transparent solid;
+
+
+    display: grid;
+    row-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, 100px);
+    justify-items: center;
+    justify-content: center;
+
+    margin-bottom: 4rem;
+  }
+
+  &_item {
+    font-family: $font-dev;
+
+    display: inline-block;
+  }
+
+  &_icon {
+    width: 3rem;
+    height: 3rem;
+
+    &___git {
+      fill: $color-grey-light-1;
+    }
+  }
+
+  &_caption {
+    text-align: center;
+    font-family: $font-dev;
+  }
 }
+
+///////////
+//PROJECTS
+//////////
 
 .projects {
 background: $color-yellow;
+padding-top: 10rem; // works like margin top because of overlap
+padding-bottom: 10rem;
+
+clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
+
+
+&_header_2 {
+  font-family: $font-dev;
+  text-align: center;
+  color: $color-brown;
+
+  margin-bottom: 4rem;
 }
 
+}
+
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 18rem);
+  gap: 3rem;
+  justify-content: center;
+
+  margin: 0 3rem 4rem 3rem;
+  margin-bottom: 4rem;
+}
+
+.card {
+background: $color-grey-dark-2;
+border-radius: 1rem;
+padding: 1rem;
+
+display: flex;
+flex-direction: column;
+
+  &___steve {
+    border: 1rem solid $color-steve;
+  }
+
+  &___hideaki {
+    border: 1rem solid $color-hideaki;
+  }
+
+  &_icon {
+    width: 30%;
+    border-radius: 1rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+
+  }
+
+  &_description {
+    flex-grow: 1; 
+
+    font-size: .9rem;
+    font-family: $font-dev;
+    font-weight: 400;
+    color: $color-grey-light-1;
+    margin-bottom: 1rem;
+  }
+
+  & ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    
+  }
+
+  &_svg {
+    fill: $color-grey-light-1;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: .8rem;
+  }
+  & li {
+    color: $color-grey-light-1;
+    font-size: 1rem;  
+
+    display: flex;
+    align-items: center;
+  }
+
+  &_link:link,
+  &_link:visited {
+    font-family: $font-dev;
+    border-radius: .75rem;
+    color: $color-grey-light-1;
+    font-size: .9rem;
+    padding: .4rem;
+  }
+
+  &_link:hover,
+  &_link:focus {
+    outline: none;
+    background: $color-grey-light-1;
+    color: $color-grey-dark-1;
+  }
+
+  &_link:active {
+    background: darken($color-grey-light-1, 15%);
+  }
+
+}
+
+////////////////
+//CONTACT
+///////////////
+
+.contact {
+
+  &_header_2 {
+    text-align: center;
+    color: $color-yellow;
+    font-family: $font-dev;
+
+    margin-bottom: 2rem;
+  }
+
+  &_ul {
+    display: grid;
+    grid-template-columns: repeat(3, 6.6rem);
+    justify-content: center;
+
+    margin-bottom: 2rem;
+
+  }
+
+  &_li {
+    padding: 1rem;
+  }
+
+  &_a:visited,
+  &_a:link {
+    color: $color-grey-light-1;
+    padding: .3rem;
+    border-radius: .5rem;
+    font-family: $font-dev;
+
+    display: grid;
+    justify-items: center;
+    row-gap: .3rem;
+  }
+
+  &_a:hover,
+  &_a:focus {
+    outline: none;
+    background: $color-yellow;
+    color: $color-brown;
+  }
+
+  &_a:hover &_svg,
+  &_a:focus &_svg {
+    fill: $color-brown;
+  }
+
+  &_a:active {
+    background: darken($color-yellow, 15%);
+  }
+
+  &_svg {
+    fill: $color-yellow;
+  }
+
+  &_line {
+    height: 3px;
+    background: $color-yellow;
+    
+    margin-bottom: 2rem;
+  }
+}
+
+//////////////
+//FOOTER//
+/////////////
+
+.container___footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .footer {
 
+
+  &_a:link,
+  &_a:visited {
+    font-size: 1.6rem;
+    font-family: $font-dev;
+    padding: .75rem;
+    border-radius: 1rem;
+    color: $color-grey-light-1;
+    margin-bottom: 2rem;
+  }
+
+  &_a:hover,
+  &_a:focus {
+    outline:none;
+    background: $color-grey-light-1;
+    color: $color-brown;
+  }
+
+  &_a:active {
+    background: darken($color-grey-light-1, 15%);
+  }
+
+  &_copyright,
+  &_author {
+    font-family: $font-dev;
+    color: $color-grey-light-1;
+    font-size: .75rem;
+  }
+
+  &_author {
+    margin-bottom: .5rem;
+  }
 }
+
