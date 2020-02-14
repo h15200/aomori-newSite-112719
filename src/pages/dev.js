@@ -25,7 +25,6 @@ import Website from "../svg/website.svg"
 
 const Dev = () => {
   const currentYear = new Date().getFullYear()
-
   const data = useStaticQuery(graphql`
     query {
       headshot: file(relativePath: { eq: "headshot.jpg" }) {

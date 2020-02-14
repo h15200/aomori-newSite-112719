@@ -6,6 +6,20 @@ module.exports = {
     description: 'About Hideaki Aomori, a world class musician who plays clarinets, saxophones, and flutes'
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'src',
+        path: `${__dirname}/src/Markdown/`
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'image',
+        path: `${__dirname}/src/image/`
+      }
+    },
     "gatsby-plugin-sass",
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
@@ -26,20 +40,7 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'src',
-        path: `${__dirname}/src/Markdown/`
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: `${__dirname}/src/image/`
-      }
-    },
+
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-favicon',
