@@ -29,7 +29,7 @@ const Dev = () => {
     query {
       h_headshot: file(relativePath: { eq: "headshot.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 100) {
+          fluid(maxWidth: 80) {
             ...GatsbyImageSharpFluid
           }
         }
