@@ -27,7 +27,7 @@ const Dev = () => {
   const currentYear = new Date().getFullYear()
   const data = useStaticQuery(graphql`
     query {
-      h_headshot: file(relativePath: { eq: "headshot.jpg" }) {
+      h_headshot: file(relativePath: { eq: "headshot.JPG" }) {
         childImageSharp {
           fluid(maxWidth: 80) {
             ...GatsbyImageSharpFluid
