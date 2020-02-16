@@ -163,7 +163,7 @@ const Dev = () => {
                       className={`${devStyles.skills_icon} ${devStyles.skills_icon___git}`}
                     />
                     <figcaption className={devStyles.skills_caption}>
-                      Git
+                      git
                     </figcaption>
                   </figure>
                 </li>
@@ -171,7 +171,7 @@ const Dev = () => {
                   <figure className={devStyles.skills_figure}>
                     <Figma className={devStyles.skills_icon} />
                     <figcaption className={devStyles.skills_caption}>
-                      Figma
+                      figma
                     </figcaption>
                   </figure>
                 </li>
@@ -190,7 +190,7 @@ const Dev = () => {
                 <Img
                   fluid={data.steve_fav.childImageSharp.fluid}
                   className={devStyles.card_icon}
-               />
+                />
                 <p className={devStyles.card_description}>
                   Custom portfolio site built on Gatsby
                 </p>
@@ -256,53 +256,59 @@ const Dev = () => {
           </div>
         </section>
         <section className={devStyles.contact} id="contact">
-        <div className={`${devStyles.container} ${devStyles.container___contact}`}>
-        <h2 className={devStyles.contact_header_2}>Contact me:</h2>
-        <ul className={devStyles.contact_ul}>
-          <li className={devStyles.contact_li}>
-            <a
-              className={devStyles.contact_a}
-              href="mailto:hideaki.aomori.webdev@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Email className={devStyles.contact_svg} />
-              Email
-            </a>
-          </li>
-          <li className={devStyles.contact_li}>
-            <a
-              className={devStyles.contact_a}
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Linkedin className={devStyles.contact_svg} />
-              Linkedin
-            </a>
-          </li>
-          <li className={devStyles.contact_li}>
-            <a
-              className={devStyles.contact_a}
-              href="https://github.com/h15200"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Github className={devStyles.contact_svg} />
-              Github
-            </a>
-          </li>
-        </ul>
-        </div>
-        <div className={devStyles.contact_line}></div>
+          <div
+            className={`${devStyles.container} ${devStyles.container___contact}`}
+          >
+            <h2 className={devStyles.contact_header_2}>Contact me:</h2>
+            <ul className={devStyles.contact_ul}>
+              <li className={devStyles.contact_li}>
+                <a
+                  className={devStyles.contact_a}
+                  href="mailto:hideaki.aomori.webdev@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Email className={devStyles.contact_svg} />
+                  Email
+                </a>
+              </li>
+              <li className={devStyles.contact_li}>
+                <a
+                  className={devStyles.contact_a}
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin className={devStyles.contact_svg} />
+                  Linkedin
+                </a>
+              </li>
+              <li className={devStyles.contact_li}>
+                <a
+                  className={devStyles.contact_a}
+                  href="https://github.com/h15200"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github className={devStyles.contact_svg} />
+                  Github
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className={devStyles.contact_line}></div>
         </section>
-        <footer className={devStyles.footer} >
+        <footer className={devStyles.footer}>
           <div
             className={`${devStyles.container} ${devStyles.container___footer}`}
           >
-           <a className={devStyles.footer_a} href="#top" >Top</a>
-           <p className={devStyles.footer_copyright}>Copyright &copy; {currentYear}</p>
-           <p className={devStyles.footer_author}>Made by Hideaki Aomori</p>
+            <a className={devStyles.footer_a} href="#top">
+              Top
+            </a>
+            <p className={devStyles.footer_copyright}>
+              Copyright &copy; {currentYear}
+            </p>
+            <p className={devStyles.footer_author}>Made by Hideaki Aomori</p>
           </div>
         </footer>
       </div>
