@@ -19,6 +19,14 @@ $color-hideaki: #EF9783;
 $font-dev: 'Roboto', sans-serif;
 
 
+$bp-largest: 60em; // 960px - no more clip path, reduce h1
+$bp-large: 50em; // 800px - smaller font, center intro
+$bp-medium: 32.5em; // 520px smaller font, center nav, smaller svg, smaller contact icon grid col
+$bp-small: 26.25em; // 420px  h1 
+// $bp-smallest:
+
+
+
 
 
 @keyframes fromLeft {
@@ -95,6 +103,11 @@ $font-dev: 'Roboto', sans-serif;
       display: grid;
       grid-template-columns: 1fr repeat(2, min-content);
       column-gap: 2rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        justify-content: space-evenly;
+      }
     }
 
     &_li {
@@ -118,6 +131,12 @@ $font-dev: 'Roboto', sans-serif;
         transition: all .3s;
 
         border-bottom: 1px transparent solid;
+
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1rem;
+      padding: .7rem; 
+    }
       }
 
 
@@ -179,6 +198,11 @@ $font-dev: 'Roboto', sans-serif;
 
   margin-bottom: 8rem;  
 
+  @media only screen and (max-width: $bp-large) {
+   display: block;
+   margin-bottom: 2rem;
+  }
+
   &_header_1 {
     font-family: inherit;
     font-size: 4rem;
@@ -189,6 +213,20 @@ $font-dev: 'Roboto', sans-serif;
 
     animation: fromLeft 1.3s ease-out;
 
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 3.5rem;
+    }
+    @media only screen and (max-width: $bp-large) {
+      font-size: 3rem; 
+      margin-bottom: 0;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 2.5rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      font-size: 2.2rem;
+    }
   }
 
   &_description {
@@ -198,6 +236,18 @@ $font-dev: 'Roboto', sans-serif;
     text-align: right;
 
     animation: fadeIn 1.5s ease-in;
+
+    @media only screen and (max-width: $bp-large) {
+     font-size: 1rem;
+     text-align: center; 
+     margin-left: 1rem;
+     margin-bottom: 2rem;
+    }
+
+
+    @media only screen and (max-width: $bp-medium) {
+     font-size: 1rem; 
+    }
   }
 
   &_img {
@@ -205,6 +255,13 @@ $font-dev: 'Roboto', sans-serif;
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
+    grid-column: 2 / 3;
+    align-self: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
 
   }
 }
@@ -218,6 +275,11 @@ $font-dev: 'Roboto', sans-serif;
   color: $color-grey-light-1;
   padding-bottom: 12rem; // for overlap
   margin-bottom: -12rem; 
+
+  @media only screen and (max-width: $bp-largest) {
+   padding-bottom: 2rem;
+   margin-bottom: 0; 
+  }
 
   &:hover > h2 {
     animation: pulsate 1.2s infinite ease-in-out;
@@ -237,20 +299,30 @@ $font-dev: 'Roboto', sans-serif;
     text-transform: uppercase;
 
     margin-bottom: 1rem;
+
+    @media only screen and (max-width: $bp-large) {
+     font-size: 1.75rem; 
+    }
+
+
+    @media only screen and (max-width: $bp-medium) {
+     font-size: 1.5rem; 
+    }
   }
 
   &_list {
     padding: 1rem;
     border: 2px transparent solid;
-
+    margin-left: 3rem;
+    margin-right: 3rem;
 
     display: grid;
     row-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, 100px);
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
     justify-items: center;
     justify-content: center;
 
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
   }
 
   &_item {
@@ -259,9 +331,22 @@ $font-dev: 'Roboto', sans-serif;
     display: inline-block;
   }
 
+  &_figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &_icon {
     width: 3rem;
     height: 3rem;
+    margin-bottom: 3px;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 2rem;
+      height: 2rem; 
+     }
+
 
     &___git {
       fill: $color-grey-light-1;
@@ -271,6 +356,10 @@ $font-dev: 'Roboto', sans-serif;
   &_caption {
     text-align: center;
     font-family: $font-dev;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: .8rem;
+     }
   }
 }
 
@@ -286,12 +375,27 @@ padding-bottom: 10rem;
 clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
 
 
+@media only screen and (max-width: $bp-largest) {
+  clip-path: none;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  
+}
+
 &_header_2 {
   font-family: $font-dev;
   text-align: center;
   color: $color-brown;
 
   margin-bottom: 4rem;
+
+  @media only screen and (max-width: $bp-large) {
+   font-size: 1.75rem;   
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+   font-size: 1.5rem;   
+  }
 }
 
 }
@@ -303,7 +407,7 @@ clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
   justify-content: center;
 
   margin: 0 3rem 4rem 3rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 .card {
@@ -338,6 +442,8 @@ flex-direction: column;
     font-weight: 400;
     color: $color-grey-light-1;
     margin-bottom: 1rem;
+
+    
   }
 
   & ul {
@@ -368,6 +474,10 @@ flex-direction: column;
     color: $color-grey-light-1;
     font-size: .9rem;
     padding: .4rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: .8rem;
+     }
   }
 
   &_link:hover,
@@ -395,6 +505,17 @@ flex-direction: column;
     font-family: $font-dev;
 
     margin-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-largest) {
+    padding-top: 3rem;
+    }
+    @media only screen and (max-width: $bp-large) {
+     font-size: 1.75rem; 
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+     font-size: 1.5rem; 
+    }
   }
 
   &_ul {
@@ -403,6 +524,10 @@ flex-direction: column;
     justify-content: center;
 
     margin-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(3, 5.6rem);
+    }
 
   }
 
@@ -420,6 +545,11 @@ flex-direction: column;
     display: grid;
     justify-items: center;
     row-gap: .3rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: .8rem;
+  
+     }
   }
 
   &_a:hover,
@@ -440,6 +570,11 @@ flex-direction: column;
 
   &_svg {
     fill: $color-yellow;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 2rem;
+      
+     }
   }
 
   &_line {
@@ -470,6 +605,11 @@ flex-direction: column;
     border-radius: 1rem;
     color: $color-grey-light-1;
     margin-bottom: 2rem;
+
+
+    @media only screen and (max-width: $bp-medium) {
+     font-size: 1.3rem; 
+    }
   }
 
   &_a:hover,
