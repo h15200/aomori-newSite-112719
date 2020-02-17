@@ -275,7 +275,7 @@ const Dev = () => {
               <li className={devStyles.contact_li}>
                 <a
                   className={devStyles.contact_a}
-                  href="#"
+                  href="https://www.linkedin.com/in/hideaki-aomori-7465a81a2/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
