@@ -111,7 +111,7 @@ const Dev = () => {
                 </li>
                 <li className={devStyles.skills_item}>
                   <figure className={devStyles.skills_figure}>
-                    <Css className={devStyles.skills_icon} />
+                    <Css className={`${devStyles.skills_icon} ${devStyles.skills_icon___css}`} />
                     <figcaption className={devStyles.skills_caption}>
                       css
                     </figcaption>
@@ -196,24 +196,24 @@ const Dev = () => {
                 </p>
                 <ul>
                   <li>
-                    <Website className={devStyles.card_svg} />
-                    <a
-                      className={devStyles.card_link}
-                      href="https://www.stevekenyon.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                  <a
+                  className={devStyles.card_link}
+                  href="https://www.stevekenyon.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                  <Website className={devStyles.card_svg} />
                       Website
                     </a>
                   </li>
                   <li>
-                    <Code className={devStyles.card_svg} />
-                    <a
-                      className={devStyles.card_link}
-                      href="https://github.com/SteveKenyonMusic/SteveKenyon.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                  <a
+                  className={devStyles.card_link}
+                  href="https://github.com/SteveKenyonMusic/SteveKenyon.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                  <Code className={devStyles.card_svg} />
                       Code
                     </a>
                   </li>
@@ -229,24 +229,24 @@ const Dev = () => {
                 </p>
                 <ul>
                   <li>
-                    <Website className={devStyles.card_svg} />
-                    <a
-                      className={devStyles.card_link}
-                      href="https://www.hideakiaomori.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                  <a
+                  className={devStyles.card_link}
+                  href="https://www.hideakiaomori.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                  <Website className={devStyles.card_svg} />
                       Website
                     </a>
                   </li>
                   <li>
-                    <Code className={devStyles.card_svg} />
-                    <a
-                      className={devStyles.card_link}
-                      href="https://github.com/h15200/aomori-newSite-112719"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                  <a
+                  className={devStyles.card_link}
+                  href="https://github.com/h15200/aomori-newSite-112719"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                  <Code className={devStyles.card_svg} />
                       Code
                     </a>
                   </li>
