@@ -48,6 +48,13 @@ const Dev = () => {
           }
         }
       }
+      rob_fav: file(relativePath: { eq: "rob_fav.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   return (
@@ -186,6 +193,42 @@ const Dev = () => {
           >
             <h2 className={devStyles.projects_header_2}>Recent Projects</h2>
             <div className={devStyles.card_container}>
+              {/* ******************* ROB's SITE ****************** */}
+                <div className={`${devStyles.card} ${devStyles.card___rob}`}>
+                <Img
+                  fluid={data.rob_fav.childImageSharp.fluid}
+                  className={devStyles.card_icon}
+                />
+                <p className={devStyles.card_description}>
+                  Small business site
+                </p>
+                <ul>
+                  <li>
+                  <a
+                  className={devStyles.card_link}
+                  href="https://infallible-bhabha-007790.netlify.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                  <Website className={devStyles.card_svg} />
+                      Website
+                    </a>
+                  </li>
+                  <li>
+                  <a
+                  className={devStyles.card_link}
+                  href="https://github.com/h15200/rob_moose_site"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                  <Code className={devStyles.card_svg} />
+                      Code
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              {/* ******************* STEVE'S SITE ****************** */}
+
               <div className={`${devStyles.card} ${devStyles.card___steve}`}>
                 <Img
                   fluid={data.steve_fav.childImageSharp.fluid}
@@ -219,6 +262,7 @@ const Dev = () => {
                   </li>
                 </ul>
               </div>
+              {/* ******************* HIDEAKI'S MUSICIAN SITE ****************** */}
               <div className={`${devStyles.card} ${devStyles.card___hideaki}`}>
                 <Img
                   fluid={data.h_fav.childImageSharp.fluid}
