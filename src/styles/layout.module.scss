@@ -8,7 +8,12 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  transition: all ease-in-out 200ms;
+  transition: all ease-in-out .15s;
+}
+
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1 {

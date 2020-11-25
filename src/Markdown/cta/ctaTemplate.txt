@@ -4,9 +4,12 @@ title: 'I will be playing at the VENUE in NYC with yMusic on JANUARY 9th!'
 footer: 'Click below to get tickets!'
 button: 'Buy Tickets!'
 ---
+
 change to development branch first
 change date, title, footer, button and change the graphql query in CTA to the new date!
-always check in development before pushing to production!
+always check in development before pushing to production! 
+
+Change button url
 
 Check spelling in a separate program and paste onto body of md!
 If you need italics, paste directly into src/components/cta

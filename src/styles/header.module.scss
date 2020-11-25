@@ -31,8 +31,6 @@ LAYOUT
 
 .container {
   margin: 0 auto;
-
-  width: 90%;
   text-align: center;
 }
 
@@ -42,10 +40,10 @@ LAYOUT
 }
 
 .navFlex {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 
@@ -65,7 +63,7 @@ INDIVIDUAL ELEMENTS
 
 .title {
   margin-bottom: .5em;
-  padding: 1em 1em 0 1em;
+  padding: .5em 1em 0 1em;
 }
 
 .socialFlex {
@@ -77,8 +75,14 @@ INDIVIDUAL ELEMENTS
   margin: 0 1em;
   color: $highlight-color;
 
-  &:hover {
-    background-color: $text-color;
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: darken($background-color, 15%);
+  }
+
+  &:active {
+    background-color: $background-color;
   }
 }
 
@@ -100,15 +104,11 @@ INDIVIDUAL ELEMENTS
 }
 
 
-
 /***********
 MEDIA QUERY
 ***********/
 
 @media only screen and (min-width: 786px) {
-  .container {
-    width: 100%;
-  }
 
   .title {
     font-size: 4rem;
@@ -122,6 +122,7 @@ MEDIA QUERY
 
   .navPages {
     font-size: 1.25rem;
+    border-bottom: 2px solid transparent;
   }
 
   .navFlex {
@@ -133,24 +134,40 @@ MEDIA QUERY
     margin-bottom: 0;
   }
 
-  .dropdownItemFlex {
+  .dropdownItemFlex{
     display: flex;
-    align-items: center;
     flex-direction: column;
     position: absolute;
+  }
+
+  .aboutDrop {
     top: 2.5em;
-    left: 1.7em;
+    left: .85em;
+    width: 80%;
+
+  }
+  .contactDrop{
+    top: 2.5em;
+    left: 1.6em;
   }
 
   .dropdownItemFlex a {
     color: $text-color;
     padding: .5em;
+    text-align: center;
   }
+
+  
 
   .navPages:hover,
   .navPages:focus {
-    border-bottom: $text-color 1px solid;
+    border-bottom: $text-color 2px solid;
     color: lighten($text-color, 30%);
+    outline: none;
+  }
+
+  .navPages:active {
+    color: $text-color;
   }
 
   .active {
@@ -181,7 +198,8 @@ DROPDOWN HIDE/SHOW (For big screen only)
     pointer-events: none;
   }
 
-  .pageGroup:hover .dropdownItemFlex {
+  .pageGroup:hover .dropdownItemFlex,
+  .pageGroup:focus .dropdownItemFlex {
     opacity: 1;
     pointer-events: auto;
   }
@@ -200,4 +218,15 @@ DROPDOWN HIDE/SHOW (For big screen only)
     color: $text-color;
     font-size: 1rem;
   }
+
+  .dropdownItemFlex a:focus {
+    outline: none;
+    opacity: 1;
+  }
+
+  .dropdownItemFlex a:active {
+    background: darken($background-color, 5%);
+  }
+
+
 }

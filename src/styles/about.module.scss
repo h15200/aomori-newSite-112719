@@ -5,14 +5,12 @@
   margin: 0 auto;
   padding: 1em 0 1em 0;
   text-align: center;
-  width: 90%;
 }
 .container {
   background-color: $background-color;
   margin: 0 auto;
   padding: 3em 2em 1em 2em;
   text-align: center;
-  width: 90%;
 
   h2 {
     border-top: $text-color 1px solid;
@@ -42,7 +40,6 @@
 @media only screen and (min-width: 786px) {
   .container {
     padding: 3em 12em 2em 12em;
-    width: 100%;
 
     a:hover {
       background-color: $highlight-color;
@@ -50,7 +47,6 @@
 
   }
   .header {
-    width: 100%;
     padding: 2em 0 2em 0;
   }
 }
