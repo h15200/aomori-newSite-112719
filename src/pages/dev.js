@@ -118,7 +118,9 @@ const Dev = () => {
                 </li>
                 <li className={devStyles.skills_item}>
                   <figure className={devStyles.skills_figure}>
-                    <Css className={`${devStyles.skills_icon} ${devStyles.skills_icon___css}`} />
+                    <Css
+                      className={`${devStyles.skills_icon} ${devStyles.skills_icon___css}`}
+                    />
                     <figcaption className={devStyles.skills_caption}>
                       css
                     </figcaption>
@@ -194,7 +196,7 @@ const Dev = () => {
             <h2 className={devStyles.projects_header_2}>Recent Projects</h2>
             <div className={devStyles.card_container}>
               {/* ******************* ROB's SITE ****************** */}
-                <div className={`${devStyles.card} ${devStyles.card___rob}`}>
+              <div className={`${devStyles.card} ${devStyles.card___rob}`}>
                 <Img
                   fluid={data.rob_fav.childImageSharp.fluid}
                   className={devStyles.card_icon}
@@ -204,24 +206,24 @@ const Dev = () => {
                 </p>
                 <ul>
                   <li>
-                  <a
-                  className={devStyles.card_link}
-                  href="https://infallible-bhabha-007790.netlify.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >
-                  <Website className={devStyles.card_svg} />
+                    <a
+                      className={devStyles.card_link}
+                      href="https://robmoose.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Website className={devStyles.card_svg} />
                       Website
                     </a>
                   </li>
                   <li>
-                  <a
-                  className={devStyles.card_link}
-                  href="https://github.com/h15200/rob_moose_site"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >
-                  <Code className={devStyles.card_svg} />
+                    <a
+                      className={devStyles.card_link}
+                      href="https://github.com/h15200/rob_moose_site"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Code className={devStyles.card_svg} />
                       Code
                     </a>
                   </li>
@@ -239,24 +241,24 @@ const Dev = () => {
                 </p>
                 <ul>
                   <li>
-                  <a
-                  className={devStyles.card_link}
-                  href="https://www.stevekenyon.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >
-                  <Website className={devStyles.card_svg} />
+                    <a
+                      className={devStyles.card_link}
+                      href="https://www.stevekenyon.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Website className={devStyles.card_svg} />
                       Website
                     </a>
                   </li>
                   <li>
-                  <a
-                  className={devStyles.card_link}
-                  href="https://github.com/SteveKenyonMusic/SteveKenyon.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >
-                  <Code className={devStyles.card_svg} />
+                    <a
+                      className={devStyles.card_link}
+                      href="https://github.com/SteveKenyonMusic/SteveKenyon.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Code className={devStyles.card_svg} />
                       Code
                     </a>
                   </li>
@@ -273,24 +275,24 @@ const Dev = () => {
                 </p>
                 <ul>
                   <li>
-                  <a
-                  className={devStyles.card_link}
-                  href="https://www.hideakiaomori.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >
-                  <Website className={devStyles.card_svg} />
+                    <a
+                      className={devStyles.card_link}
+                      href="https://www.hideakiaomori.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Website className={devStyles.card_svg} />
                       Website
                     </a>
                   </li>
                   <li>
-                  <a
-                  className={devStyles.card_link}
-                  href="https://github.com/h15200/aomori-newSite-112719"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >
-                  <Code className={devStyles.card_svg} />
+                    <a
+                      className={devStyles.card_link}
+                      href="https://github.com/h15200/aomori-newSite-112719"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Code className={devStyles.card_svg} />
                       Code
                     </a>
                   </li>
