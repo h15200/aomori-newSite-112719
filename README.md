@@ -20,3 +20,4 @@ To change CTA, src/Markdown/cta and read the template for instructions
 - if you get a gatsby-config error, most likely need to refactor all items in the plugin[] to objects with a 'resolve' key even if you don't need options
 - if you get a postcss error, install postcss-loader and postcss as additional dependencies
   - additionally, you have to import all css modules with this syntax `import * as ctaStyles from "../styles/cta.module.scss"`
+- don't forget to change netlify NODE_VERSION env to `14.18.2`
