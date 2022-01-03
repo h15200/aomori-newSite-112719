@@ -9,6 +9,9 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-sass",
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "image",
@@ -22,7 +25,6 @@ module.exports = {
         path: `${__dirname}/src/Markdown/`,
       },
     },
-    "gatsby-plugin-sass",
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -34,18 +36,24 @@ module.exports = {
         ],
       },
     },
-
-    "gatsby-transformer-remark",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-favicon",
+    {
+      resolve: "gatsby-transformer-remark",
+    }, 
+    {
+      resolve: "gatsby-plugin-react-helmet",
+    },
     {
       resolve: "gatsby-plugin-html-attributes",
       options: {
         lang: "en",
       },
     },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-transformer-sharp",
+    },
+    {
+      resolve: "gatsby-plugin-sharp",
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -59,7 +67,9 @@ module.exports = {
         crossOrigin: `use-credentials`,
       },
     },
-    "gatsby-plugin-offline",
+    {
+      resolve: "gatsby-plugin-offline",
+    },
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {

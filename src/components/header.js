@@ -3,7 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faInstagram, faSpotify } from "@fortawesome/free-brands-svg-icons"
 
-import headerStyles from "../styles/header.module.scss"
+import * as headerStyles from "../styles/header.module.scss"
 
 const Header = () => {
   const data = useStaticQuery(graphql`

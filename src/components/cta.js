@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from 'gatsby'
-import ctaStyles from "../styles/cta.module.scss"
+import * as ctaStyles from "../styles/cta.module.scss"
 
 const CTA = () => {
   const data = useStaticQuery(graphql`

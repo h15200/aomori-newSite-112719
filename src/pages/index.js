@@ -4,15 +4,15 @@ import Layout from "../components/layout"
 import CTA from "../components/cta"
 import Head from '../components/head'
 
-import indexStyles from "../styles/index.module.scss"
+import {container, videoContainer} from "../styles/index.module.scss"
 
 const IndexPage = () => (
   <Layout>
     <Fragment>
       <Head title="Home"/>
       <CTA />
-      <div className={indexStyles.container}>
-        <div className={indexStyles.videoContainer}>
+      <div className={container}>
+        <div className={videoContainer}>
           <iframe
             title="Saturday Night Live performance"
             width="560"
@@ -23,7 +23,7 @@ const IndexPage = () => (
             allowFullScreen
           ></iframe>
         </div>
-        <div className={indexStyles.videoContainer}>
+        <div className={videoContainer}>
           <iframe
             title="Live recording with the funk band, Scary Pockets"
             width="560"

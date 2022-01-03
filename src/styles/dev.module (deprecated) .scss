@@ -1,9 +1,9 @@
 $color-bg: #1b1b1b;
-$color-yellow: #E9F5C5;
+$color-yellow: #e9f5c5;
 
 $color-grey-dark-1: rgb(85, 85, 85);
-$color-grey-dark-2: rgb(45,45,45);
-$color-grey-dark-3: rgb(25,25,25);
+$color-grey-dark-2: rgb(45, 45, 45);
+$color-grey-dark-3: rgb(25, 25, 25);
 
 $color-grey-light-1: #e2e2e2;
 $color-grey-light-2: #c4c4c4;
@@ -11,20 +11,15 @@ $color-grey-light-2: #c4c4c4;
 $color-card-blue: #50b6e2;
 
 $color-steve: #4f7476;
-$color-hideaki: #EF9783;
+$color-hideaki: #ef9783;
 
-$font-dev: 'Roboto', sans-serif;
-
+$font-dev: "Roboto", sans-serif;
 
 $bp-largest: 60em; // 960px - no more clip path, reduce h1
 $bp-large: 50em; // 800px - smaller font, center intro
 $bp-medium: 32.5em; // 520px smaller font, center nav, smaller svg, smaller contact icon grid col
-$bp-small: 26.25em; // 420px  h1 
+$bp-small: 26.25em; // 420px  h1
 // $bp-smallest:
-
-
-
-
 
 @keyframes fromLeft {
   0% {
@@ -69,21 +64,22 @@ $bp-small: 26.25em; // 420px  h1
   }
 }
 
-
 ///////////////////
 ///LAYOUT and CONTAINER
 //////////////////////
 
 .devPage {
-  background-image: linear-gradient(to bottom right,lighten($color-bg, 20%), $color-bg ); 
+  background-image: linear-gradient(
+    to bottom right,
+    lighten($color-bg, 20%),
+    $color-bg
+  );
 }
-
 
 .container {
   font-family: $font-dev;
   max-width: 65rem;
   margin: 0 auto;
-
 }
 
 ///////////
@@ -91,95 +87,89 @@ $bp-small: 26.25em; // 420px  h1
 ////////////
 
 .nav {
-    padding: 2rem;
-    margin-bottom: 1rem;
+  padding: 2rem;
+  margin-bottom: 1rem;
 
+  &_ul {
+    padding: 1rem;
 
-    &_ul {
-      padding: 1rem;
-
-      display: grid;
-      grid-template-columns: 1fr repeat(2, min-content);
-      column-gap: 2rem;
-
-      @media only screen and (max-width: $bp-medium) {
-        display: flex;
-        justify-content: space-evenly;
-      }
-    }
-
-    &_li {
-      position: relative;
-
-      &___1 {
-        grid-column: 2 / 3;
-      }
-
-    }
-
-    &_link {
-
-      &:link,
-      &:visited {
-        padding: 1rem;
-        text-transform: lowercase;
-        font-weight: 400;
-        font-size: 1.2rem;
-        font-family: $font-dev;
-        transition: all .3s;
-
-        border-bottom: 1px transparent solid;
-
+    display: grid;
+    grid-template-columns: 1fr repeat(2, min-content);
+    column-gap: 2rem;
 
     @media only screen and (max-width: $bp-medium) {
-      font-size: 1rem;
-      padding: .7rem; 
+      display: flex;
+      justify-content: space-evenly;
     }
-      }
+  }
 
+  &_li {
+    position: relative;
+
+    &___1 {
+      grid-column: 2 / 3;
+    }
+  }
+
+  &_link {
+    &:link,
+    &:visited {
+      padding: 1rem;
+      text-transform: lowercase;
+      font-weight: 400;
+      font-size: 1.2rem;
+      font-family: $font-dev;
+      transition: all 0.3s;
+
+      border-bottom: 1px transparent solid;
+
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 1rem;
+        padding: 0.7rem;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+
+    &___1 {
+      &:link,
+      &:visited {
+        color: $color-grey-light-1;
+      }
 
       &:hover,
       &:focus {
-        outline: none;
+        border-bottom: 1px $color-grey-light-1 solid;
       }
 
-
-      &___1 {
-        &:link,
-        &:visited {
-          color: $color-grey-light-1;
-        }
-
-        &:hover, 
-        &:focus {
-          border-bottom: 1px $color-grey-light-1 solid;
-        }
-
-        &:active {
-          border-bottom: 3px $color-grey-light-1 solid;
-        }
-      }
-
-        &___2 {
-          &:link,
-          &:visited {
-            background: $color-yellow;
-            color: $color-bg;
-          }
-
-          &:focus, 
-          &:hover {
-            background-color: $color-card-blue;
-            color: $color-grey-dark-2;
-          }
-
-          &:active {
-            background: lighten($color-card-blue, 15%);
-            color: $color-grey-dark-3;
-          }
-        }
+      &:active {
+        border-bottom: 3px $color-grey-light-1 solid;
       }
     }
+
+    &___2 {
+      &:link,
+      &:visited {
+        background: $color-yellow;
+        color: $color-bg;
+      }
+
+      &:focus,
+      &:hover {
+        background-color: $color-card-blue;
+        color: $color-grey-dark-2;
+      }
+
+      &:active {
+        background: lighten($color-card-blue, 15%);
+        color: $color-grey-dark-3;
+      }
+    }
+  }
+}
 
 ////////////
 //INTRO
@@ -193,17 +183,15 @@ $bp-small: 26.25em; // 420px  h1
   column-gap: 3rem;
   justify-content: center;
 
-  margin-bottom: 8rem;  
+  margin-bottom: 8rem;
 
   @media only screen and (max-width: $bp-large) {
-   display: block;
-   margin-bottom: 2rem;
+    display: block;
+    margin-bottom: 2rem;
   }
 
-
-
   &_header_1 {
-    font-family: 'Righteous',sans-serif;
+    font-family: "Righteous", sans-serif;
     text-align: center;
     font-size: 4rem;
     word-spacing: 4px;
@@ -218,7 +206,7 @@ $bp-small: 26.25em; // 420px  h1
       font-size: 3.5rem;
     }
     @media only screen and (max-width: $bp-large) {
-      font-size: 3rem; 
+      font-size: 3rem;
       margin-bottom: 0;
     }
 
@@ -239,15 +227,14 @@ $bp-small: 26.25em; // 420px  h1
     animation: fadeIn 1.5s ease-in;
 
     @media only screen and (max-width: $bp-large) {
-     font-size: 1rem;
-     text-align: center; 
-     margin-left: 1rem;
-     margin-bottom: 2rem;
+      font-size: 1rem;
+      text-align: center;
+      margin-left: 1rem;
+      margin-bottom: 2rem;
     }
 
-
     @media only screen and (max-width: $bp-medium) {
-     font-size: 1rem; 
+      font-size: 1rem;
     }
   }
 
@@ -263,7 +250,6 @@ $bp-small: 26.25em; // 420px  h1
       width: 4.5rem;
       height: 4.5rem;
     }
-
   }
 }
 
@@ -271,15 +257,14 @@ $bp-small: 26.25em; // 420px  h1
 //SKILLS
 ////////////
 
-
 .skills {
   color: $color-grey-light-1;
   padding-bottom: 12rem; // for overlap
-  margin-bottom: -12rem; 
+  margin-bottom: -12rem;
 
   @media only screen and (max-width: $bp-largest) {
-   padding-bottom: 2rem;
-   margin-bottom: 0; 
+    padding-bottom: 2rem;
+    margin-bottom: 0;
   }
 
   &:hover > h2 {
@@ -302,19 +287,17 @@ $bp-small: 26.25em; // 420px  h1
     margin-bottom: 1rem;
 
     @media only screen and (max-width: $bp-large) {
-     font-size: 1.75rem; 
+      font-size: 1.75rem;
     }
 
-
     @media only screen and (max-width: $bp-medium) {
-     font-size: 1.5rem; 
+      font-size: 1.5rem;
     }
   }
 
   &_list {
     padding: 1rem;
     border: 2px transparent solid;
-
 
     max-width: 25rem;
     margin: 0 auto;
@@ -346,8 +329,8 @@ $bp-small: 26.25em; // 420px  h1
 
     @media only screen and (max-width: $bp-medium) {
       width: 2rem;
-      height: 2rem; 
-     }
+      height: 2rem;
+    }
 
     &___css {
       color: white;
@@ -363,8 +346,8 @@ $bp-small: 26.25em; // 420px  h1
     font-family: $font-dev;
 
     @media only screen and (max-width: $bp-medium) {
-      font-size: .8rem;
-     }
+      font-size: 0.8rem;
+    }
   }
 }
 
@@ -373,36 +356,33 @@ $bp-small: 26.25em; // 420px  h1
 //////////
 
 .projects {
-background: $color-yellow;
-padding-top: 10rem; // works like margin top because of overlap
-padding-bottom: 10rem;
+  background: $color-yellow;
+  padding-top: 10rem; // works like margin top because of overlap
+  padding-bottom: 10rem;
 
-clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
+  clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
 
-
-@media only screen and (max-width: $bp-largest) {
-  clip-path: none;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  
-}
-
-&_header_2 {
-  font-family: $font-dev;
-  text-align: center;
-  color: $color-bg;
-
-  margin-bottom: 4rem;
-
-  @media only screen and (max-width: $bp-large) {
-   font-size: 1.75rem;   
+  @media only screen and (max-width: $bp-largest) {
+    clip-path: none;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
-  @media only screen and (max-width: $bp-medium) {
-   font-size: 1.5rem;   
-  }
-}
+  &_header_2 {
+    font-family: $font-dev;
+    text-align: center;
+    color: $color-bg;
 
+    margin-bottom: 4rem;
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 1.75rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.5rem;
+    }
+  }
 }
 
 .card_container {
@@ -416,41 +396,34 @@ clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
 }
 
 .card {
-background: $color-grey-dark-2;
-border-radius: 1rem;
-padding: 1rem;
+  background: $color-grey-dark-2;
+  border-radius: 1rem;
+  padding: 1rem;
 
-
-display: flex;
-flex-direction: column;
-
-
+  display: flex;
+  flex-direction: column;
 
   &_icon {
     width: 30%;
     border-radius: 1rem;
     margin: 0 auto;
     margin-bottom: 1rem;
-
   }
 
   &_description {
-    flex-grow: 1; 
+    flex-grow: 1;
 
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-family: $font-dev;
     font-weight: 400;
     color: $color-grey-light-1;
     margin-bottom: 1rem;
-
-    
   }
 
   & ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    
   }
 
   &_svg {
@@ -461,25 +434,23 @@ flex-direction: column;
   }
   & li {
     color: $color-grey-light-1;
-    font-size: 1rem;  
-
-
+    font-size: 1rem;
   }
 
   &_link:link,
   &_link:visited {
     font-family: $font-dev;
-    border-radius: .75rem;
+    border-radius: 0.75rem;
     color: $color-grey-light-1;
-    font-size: .9rem;
-    padding: .4rem;
+    font-size: 0.9rem;
+    padding: 0.4rem;
 
     display: flex;
     align-items: center;
 
     @media only screen and (max-width: $bp-medium) {
-      font-size: .8rem;
-     }
+      font-size: 0.8rem;
+    }
   }
 
   &_link:hover,
@@ -491,13 +462,12 @@ flex-direction: column;
 
   &_link:hover &_svg,
   &_link:focus &_svg {
-  fill: $color-grey-dark-1;
+    fill: $color-grey-dark-1;
   }
 
   &_link:active {
     background: darken($color-grey-light-1, 15%);
   }
-
 }
 
 ////////////////
@@ -505,7 +475,6 @@ flex-direction: column;
 ///////////////
 
 .contact {
-
   &_header_2 {
     text-align: center;
     color: $color-yellow;
@@ -514,14 +483,14 @@ flex-direction: column;
     margin-bottom: 2rem;
 
     @media only screen and (max-width: $bp-largest) {
-    padding-top: 3rem;
+      padding-top: 3rem;
     }
     @media only screen and (max-width: $bp-large) {
-     font-size: 1.75rem; 
+      font-size: 1.75rem;
     }
 
     @media only screen and (max-width: $bp-medium) {
-     font-size: 1.5rem; 
+      font-size: 1.5rem;
     }
   }
 
@@ -535,7 +504,6 @@ flex-direction: column;
     @media only screen and (max-width: $bp-medium) {
       grid-template-columns: repeat(3, 5.6rem);
     }
-
   }
 
   &_li {
@@ -545,18 +513,17 @@ flex-direction: column;
   &_a:visited,
   &_a:link {
     color: $color-grey-light-1;
-    padding: .3rem;
-    border-radius: .5rem;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
     font-family: $font-dev;
 
     display: grid;
     justify-items: center;
-    row-gap: .3rem;
+    row-gap: 0.3rem;
 
     @media only screen and (max-width: $bp-medium) {
-      font-size: .8rem;
-  
-     }
+      font-size: 0.8rem;
+    }
   }
 
   &_a:hover,
@@ -580,14 +547,13 @@ flex-direction: column;
 
     @media only screen and (max-width: $bp-medium) {
       width: 2rem;
-      
-     }
+    }
   }
 
   &_line {
     height: 3px;
     background: $color-yellow;
-    
+
     margin-bottom: 2rem;
   }
 }
@@ -602,26 +568,23 @@ flex-direction: column;
   align-items: center;
 }
 .footer {
-
-
   &_a:link,
   &_a:visited {
     font-size: 1.6rem;
     font-family: $font-dev;
-    padding: .75rem;
+    padding: 0.75rem;
     border-radius: 1rem;
     color: $color-grey-light-1;
     margin-bottom: 2rem;
 
-
     @media only screen and (max-width: $bp-medium) {
-     font-size: 1.3rem; 
+      font-size: 1.3rem;
     }
   }
 
   &_a:hover,
   &_a:focus {
-    outline:none;
+    outline: none;
     background: $color-grey-light-1;
     color: $color-bg;
   }
@@ -634,11 +597,10 @@ flex-direction: column;
   &_author {
     font-family: $font-dev;
     color: $color-grey-light-1;
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 
   &_author {
     margin-bottom: 1rem;
   }
 }
-
