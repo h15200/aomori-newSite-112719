@@ -3,7 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faInstagram, faSpotify } from "@fortawesome/free-brands-svg-icons"
 
-import headerStyles from "../styles/header.module.scss"
+import * as headerStyles from "../styles/header.module.scss"
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -27,15 +27,6 @@ const Header = () => {
           className={headerStyles.spotify}
         >
           <FontAwesomeIcon icon={faSpotify} size="3x" />
-        </a>
-        <a
-          title="Instagram"
-          href="https://www.instagram.com/h.aomori/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={headerStyles.instagram}
-        >
-          <FontAwesomeIcon icon={faInstagram} size="3x" />
         </a>
       </div>
 

@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import Header from "./header"
 import Footer from "./footer"
 
-import layoutStyles from '../styles/layout.module.scss'
+import * as layoutStyles from '../styles/layout.module.scss'
 
 const Layout = props => (
   <div className={layoutStyles.container}>

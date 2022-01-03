@@ -2,7 +2,7 @@ import React, { Fragment } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
-import aboutStyles from "../styles/about.module.scss"
+import {container, header} from "../styles/about.module.scss"
 
 const AboutPage = () => {
   // fetching all MD files that has a frontmatter title that starts with "about" in order of id
@@ -26,8 +26,8 @@ const AboutPage = () => {
     <Layout>
       <Fragment>
         <Head title="About" />
-        <h2 className={aboutStyles.header}>About</h2>
-        <div className={aboutStyles.container}>
+        <h2 className={header}>About</h2>
+        <div className={container}>
           <p>{data.allMarkdownRemark.edges[0].node.rawMarkdownBody}</p>
           <h2 id="classical">Classical</h2>
           <p>{data.allMarkdownRemark.edges[1].node.rawMarkdownBody}</p>

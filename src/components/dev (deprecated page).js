@@ -5,7 +5,10 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import faviconDev from "../image/faviconDev.ico"
-import devStyles from "../styles/dev.module.scss"
+import {devPage, container, nav, intro, skills, projects, 
+  card_container, card, contact, container___header,
+   nav_li___2, intro_text, container___projects, card___rob, 
+   card___steve, card___hideaki, header, nav_ul, nav_li, nav_li___1, nav_link, nav_link___1, nav_link___2, intro_header_1, intro_description, intro_img, skills_header_2, skills_list, skills_item, skills_figure, skills_icon, skills_caption, skills_icon___css, skills_icon___git, projects_header_2, card_icon, card_description, card_link, card_svg, container___contact, contact_header_2, contact_ul, contact_li, contact_a, contact_svg, contact_line, footer, container___footer, footer_a, footer_copyright, footer_author,  } from "../styles/dev.module.scss"
 
 import Html from "../svg/html5.svg"
 import Css from "../svg/css3.svg"
@@ -68,24 +71,24 @@ const Dev = () => {
         />
         <link rel="shortcut icon" type="image/ico" href={faviconDev} />
       </Helmet>
-      <div className={devStyles.devPage} id="top">
-        <header className={devStyles.header}>
+      <div className={devPage} id="top">
+        <header className={header}>
           <div
-            className={`${devStyles.container} ${devStyles.container___header}`}
+            className={`${container} ${container___header}`}
           >
-            <nav className={devStyles.nav}>
-              <ul className={devStyles.nav_ul}>
-                <li className={`${devStyles.nav_li} ${devStyles.nav_li___1}`}>
+            <nav className={nav}>
+              <ul className={nav_ul}>
+                <li className={`${nav_li} ${nav_li___1}`}>
                   <a
-                    className={`${devStyles.nav_link} ${devStyles.nav_link___1}`}
+                    className={`${nav_link} ${nav_link___1}`}
                     href="#projects"
                   >
                     projects
                   </a>
                 </li>
-                <li className={`${devStyles.nav_li} ${devStyles.nav_li___2}`}>
+                <li className={`${nav_li} ${nav_li___2}`}>
                   <a
-                    className={`${devStyles.nav_link} ${devStyles.nav_link___2}`}
+                    className={`${nav_link} ${nav_link___2}`}
                     href="#contact"
                   >
                     contact
@@ -93,93 +96,93 @@ const Dev = () => {
                 </li>
               </ul>
             </nav>
-            <div className={devStyles.intro}>
-              <div className={devStyles.intro_text}>
-                <h1 className={devStyles.intro_header_1}>Hideaki Aomori</h1>
-                <p className={devStyles.intro_description}>
+            <div className={intro}>
+              <div className={intro_text}>
+                <h1 className={intro_header_1}>Hideaki Aomori</h1>
+                <p className={intro_description}>
                   web developer and designer
                 </p>
               </div>
               <Img
                 fluid={data.h_headshot.childImageSharp.fluid}
-                className={devStyles.intro_img}
+                className={intro_img}
               />
             </div>
-            <div className={`${devStyles.skills} `}>
-              <h2 className={devStyles.skills_header_2}>Skills:</h2>
-              <ul className={devStyles.skills_list}>
-                <li className={devStyles.skills_item}>
-                  <figure className={devStyles.skills_figure}>
-                    <Html className={devStyles.skills_icon} />
-                    <figcaption className={devStyles.skills_caption}>
+            <div className={`${skills} `}>
+              <h2 className={skills_header_2}>Skills:</h2>
+              <ul className={skills_list}>
+                <li className={skills_item}>
+                  <figure className={skills_figure}>
+                    <Html className={skills_icon} />
+                    <figcaption className={skills_caption}>
                       html
                     </figcaption>
                   </figure>
                 </li>
-                <li className={devStyles.skills_item}>
-                  <figure className={devStyles.skills_figure}>
+                <li className={skills_item}>
+                  <figure className={skills_figure}>
                     <Css
-                      className={`${devStyles.skills_icon} ${devStyles.skills_icon___css}`}
+                      className={`${skills_icon} ${skills_icon___css}`}
                     />
-                    <figcaption className={devStyles.skills_caption}>
+                    <figcaption className={skills_caption}>
                       css
                     </figcaption>
                   </figure>
                 </li>
-                <li className={devStyles.skills_item}>
-                  <figure className={devStyles.skills_figure}>
-                    <Sass className={devStyles.skills_icon} />
-                    <figcaption className={devStyles.skills_caption}>
+                <li className={skills_item}>
+                  <figure className={skills_figure}>
+                    <Sass className={skills_icon} />
+                    <figcaption className={skills_caption}>
                       sass
                     </figcaption>
                   </figure>
                 </li>
-                <li className={devStyles.skills_item}>
-                  <figure className={devStyles.skills_figure}>
-                    <Javascript className={devStyles.skills_icon} />
-                    <figcaption className={devStyles.skills_caption}>
+                <li className={skills_item}>
+                  <figure className={skills_figure}>
+                    <Javascript className={skills_icon} />
+                    <figcaption className={skills_caption}>
                       javascript
                     </figcaption>
                   </figure>
                 </li>
-                <li className={devStyles.skills_item}>
-                  <figure className={devStyles.skills_figure}>
-                    <ReactIcon className={devStyles.skills_icon} />
-                    <figcaption className={devStyles.skills_caption}>
+                <li className={skills_item}>
+                  <figure className={skills_figure}>
+                    <ReactIcon className={skills_icon} />
+                    <figcaption className={skills_caption}>
                       react
                     </figcaption>
                   </figure>
                 </li>
-                <li className={devStyles.skills_item}>
-                  <figure className={devStyles.skills_figure}>
-                    <GraphqlIcon className={devStyles.skills_icon} />
-                    <figcaption className={devStyles.skills_caption}>
+                <li className={skills_item}>
+                  <figure className={skills_figure}>
+                    <GraphqlIcon className={skills_icon} />
+                    <figcaption className={skills_caption}>
                       graphql
                     </figcaption>
                   </figure>
                 </li>
-                <li className={devStyles.skills_item}>
-                  <figure className={devStyles.skills_figure}>
-                    <GatsbyIcon className={devStyles.skills_icon} />
-                    <figcaption className={devStyles.skills_caption}>
+                <li className={skills_item}>
+                  <figure className={skills_figure}>
+                    <GatsbyIcon className={skills_icon} />
+                    <figcaption className={skills_caption}>
                       gatsby
                     </figcaption>
                   </figure>
                 </li>
-                <li className={devStyles.skills_item}>
-                  <figure className={devStyles.skills_figure}>
+                <li className={skills_item}>
+                  <figure className={skills_figure}>
                     <Git
-                      className={`${devStyles.skills_icon} ${devStyles.skills_icon___git}`}
+                      className={`${skills_icon} ${skills_icon___git}`}
                     />
-                    <figcaption className={devStyles.skills_caption}>
+                    <figcaption className={skills_caption}>
                       git
                     </figcaption>
                   </figure>
                 </li>
-                <li className={devStyles.skills_item}>
-                  <figure className={devStyles.skills_figure}>
-                    <Figma className={devStyles.skills_icon} />
-                    <figcaption className={devStyles.skills_caption}>
+                <li className={skills_item}>
+                  <figure className={skills_figure}>
+                    <Figma className={skills_icon} />
+                    <figcaption className={skills_caption}>
                       figma
                     </figcaption>
                   </figure>
@@ -189,41 +192,41 @@ const Dev = () => {
           </div>
         </header>
 
-        <section className={devStyles.projects} id="projects">
+        <section className={projects} id="projects">
           <div
-            className={`${devStyles.container} ${devStyles.container___projects}`}
+            className={`${container} ${container___projects}`}
           >
-            <h2 className={devStyles.projects_header_2}>Recent Projects</h2>
-            <div className={devStyles.card_container}>
+            <h2 className={projects_header_2}>Recent Projects</h2>
+            <div className={card_container}>
               {/* ******************* ROB's SITE ****************** */}
-              <div className={`${devStyles.card} ${devStyles.card___rob}`}>
+              <div className={`${card} ${card___rob}`}>
                 <Img
                   fluid={data.rob_fav.childImageSharp.fluid}
-                  className={devStyles.card_icon}
+                  className={card_icon}
                 />
-                <p className={devStyles.card_description}>
+                <p className={card_description}>
                   Small business site
                 </p>
                 <ul>
                   <li>
                     <a
-                      className={devStyles.card_link}
+                      className={card_link}
                       href="https://robmoose.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Website className={devStyles.card_svg} />
+                      <Website className={card_svg} />
                       Website
                     </a>
                   </li>
                   <li>
                     <a
-                      className={devStyles.card_link}
+                      className={card_link}
                       href="https://github.com/h15200/rob_moose_site"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Code className={devStyles.card_svg} />
+                      <Code className={card_svg} />
                       Code
                     </a>
                   </li>
@@ -231,68 +234,68 @@ const Dev = () => {
               </div>
               {/* ******************* STEVE'S SITE ****************** */}
 
-              <div className={`${devStyles.card} ${devStyles.card___steve}`}>
+              <div className={`${card} ${card___steve}`}>
                 <Img
                   fluid={data.steve_fav.childImageSharp.fluid}
-                  className={devStyles.card_icon}
+                  className={card_icon}
                 />
-                <p className={devStyles.card_description}>
+                <p className={card_description}>
                   Custom portfolio site built on Gatsby
                 </p>
                 <ul>
                   <li>
                     <a
-                      className={devStyles.card_link}
+                      className={card_link}
                       href="https://www.stevekenyon.com"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Website className={devStyles.card_svg} />
+                      <Website className={card_svg} />
                       Website
                     </a>
                   </li>
                   <li>
                     <a
-                      className={devStyles.card_link}
+                      className={card_link}
                       href="https://github.com/SteveKenyonMusic/SteveKenyon.com"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Code className={devStyles.card_svg} />
+                      <Code className={card_svg} />
                       Code
                     </a>
                   </li>
                 </ul>
               </div>
               {/* ******************* HIDEAKI'S MUSICIAN SITE ****************** */}
-              <div className={`${devStyles.card} ${devStyles.card___hideaki}`}>
+              <div className={`${card} ${card___hideaki}`}>
                 <Img
                   fluid={data.h_fav.childImageSharp.fluid}
-                  className={devStyles.card_icon}
+                  className={card_icon}
                 />
-                <p className={devStyles.card_description}>
+                <p className={card_description}>
                   My musician site. Progressive web app
                 </p>
                 <ul>
                   <li>
                     <a
-                      className={devStyles.card_link}
+                      className={card_link}
                       href="https://www.hideakiaomori.com"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Website className={devStyles.card_svg} />
+                      <Website className={card_svg} />
                       Website
                     </a>
                   </li>
                   <li>
                     <a
-                      className={devStyles.card_link}
+                      className={card_link}
                       href="https://github.com/h15200/aomori-newSite-112719"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Code className={devStyles.card_svg} />
+                      <Code className={card_svg} />
                       Code
                     </a>
                   </li>
@@ -301,60 +304,60 @@ const Dev = () => {
             </div>
           </div>
         </section>
-        <section className={devStyles.contact} id="contact">
+        <section className={contact} id="contact">
           <div
-            className={`${devStyles.container} ${devStyles.container___contact}`}
+            className={`${container} ${container___contact}`}
           >
-            <h2 className={devStyles.contact_header_2}>Contact me:</h2>
-            <ul className={devStyles.contact_ul}>
-              <li className={devStyles.contact_li}>
+            <h2 className={contact_header_2}>Contact me:</h2>
+            <ul className={contact_ul}>
+              <li className={contact_li}>
                 <a
-                  className={devStyles.contact_a}
+                  className={contact_a}
                   href="mailto:hideaki.aomori.webdev@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Email className={devStyles.contact_svg} />
+                  <Email className={contact_svg} />
                   Email
                 </a>
               </li>
-              <li className={devStyles.contact_li}>
+              <li className={contact_li}>
                 <a
-                  className={devStyles.contact_a}
+                  className={contact_a}
                   href="https://www.linkedin.com/in/hideaki-aomori-7465a81a2/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Linkedin className={devStyles.contact_svg} />
+                  <Linkedin className={contact_svg} />
                   Linkedin
                 </a>
               </li>
-              <li className={devStyles.contact_li}>
+              <li className={contact_li}>
                 <a
-                  className={devStyles.contact_a}
+                  className={contact_a}
                   href="https://github.com/h15200"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Github className={devStyles.contact_svg} />
+                  <Github className={contact_svg} />
                   Github
                 </a>
               </li>
             </ul>
           </div>
-          <div className={devStyles.contact_line}></div>
+          <div className={contact_line}></div>
         </section>
-        <footer className={devStyles.footer}>
+        <footer className={footer}>
           <div
-            className={`${devStyles.container} ${devStyles.container___footer}`}
+            className={`${container} ${container___footer}`}
           >
-            <a className={devStyles.footer_a} href="#top">
+            <a className={footer_a} href="#top">
               Top
             </a>
-            <p className={devStyles.footer_copyright}>
+            <p className={footer_copyright}>
               Copyright &copy; {currentYear}
             </p>
-            <p className={devStyles.footer_author}>Made by Hideaki Aomori</p>
+            <p className={footer_author}>Made by Hideaki Aomori</p>
           </div>
         </footer>
       </div>
