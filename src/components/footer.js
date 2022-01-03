@@ -1,20 +1,20 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faInstagram, faSpotify } from "@fortawesome/free-brands-svg-icons"
+import { faSpotify } from "@fortawesome/free-brands-svg-icons"
 
 import * as footerStyles from "../styles/footer.module.scss"
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
-    query{
-      site{
-        siteMetadata{
+    query {
+      site {
+        siteMetadata {
           author
         }
       }
     }
-    `)
+  `)
   return (
     <footer className={footerStyles.container}>
       <ul className={footerStyles.flex}>

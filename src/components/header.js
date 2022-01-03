@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faInstagram, faSpotify } from "@fortawesome/free-brands-svg-icons"
+import { faSpotify } from "@fortawesome/free-brands-svg-icons"
 
 import * as headerStyles from "../styles/header.module.scss"
 
@@ -9,7 +9,7 @@ const Header = () => {
   const data = useStaticQuery(graphql`
     query {
       site {
-        siteMetadata{
+        siteMetadata {
           title
         }
       }
@@ -51,7 +51,9 @@ const Header = () => {
             >
               about
             </Link>
-            <div className={`${headerStyles.dropdownItemFlex} ${headerStyles.aboutDrop}`}>
+            <div
+              className={`${headerStyles.dropdownItemFlex} ${headerStyles.aboutDrop}`}
+            >
               <Link to="/about#classical">Classical</Link>
               <Link to="/about#jazz">Jazz</Link>
               <Link to="/about#commercial">Commercial Music</Link>
@@ -76,7 +78,9 @@ const Header = () => {
             >
               contact
             </Link>
-            <div className={`${headerStyles.dropdownItemFlex} ${headerStyles.contactDrop}`}>
+            <div
+              className={`${headerStyles.dropdownItemFlex} ${headerStyles.contactDrop}`}
+            >
               <Link to="/contact#studio">Studio Work</Link>
               <Link to="/contact#teaching">Teaching</Link>
             </div>
