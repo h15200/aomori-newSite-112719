@@ -28,15 +28,6 @@ const Header = () => {
         >
           <FontAwesomeIcon icon={faSpotify} size="3x" />
         </a>
-        <a
-          title="Instagram"
-          href="https://www.instagram.com/h.aomori/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={headerStyles.instagram}
-        >
-          <FontAwesomeIcon icon={faInstagram} size="3x" />
-        </a>
       </div>
 
       <nav>

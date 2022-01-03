@@ -49,17 +49,6 @@ const Footer = () => {
             <FontAwesomeIcon icon={faSpotify} size="1x" />
           </a>
         </li>
-        <li>
-          <a
-            title="Instagram"
-            href="https://www.instagram.com/h.aomori/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={footerStyles.social}
-          >
-            <FontAwesomeIcon icon={faInstagram} size="1x" />
-          </a>
-        </li>
       </ul>
       <p className={footerStyles.credit}>
         Designed and developed by {data.site.siteMetadata.author}
