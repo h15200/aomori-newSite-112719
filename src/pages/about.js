@@ -2,7 +2,7 @@ import React, { Fragment } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
-import {container, header} from "../styles/about.module.scss"
+import { container, header } from "../styles/about.module.scss"
 
 const AboutPage = () => {
   // fetching all MD files that has a frontmatter title that starts with "about" in order of id
@@ -92,7 +92,7 @@ const AboutPage = () => {
                 href="https://www.ymusicensemble.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >
+              >
                 yMusic
               </a>
             </li>

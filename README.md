@@ -4,11 +4,13 @@
 
 - https://github.com/gatsbyjs/gatsby/releases
 
-## set up
+## set up / testing
 
 - make sure you are on the branch "development"
 - npm i
 - npm start
+
+- to test prod, `gatsby build` then `gatsby serve`
 
 To change CTA, src/Markdown/cta and read the template for instructions
 
@@ -21,3 +23,8 @@ To change CTA, src/Markdown/cta and read the template for instructions
 - if you get a postcss error, install postcss-loader and postcss as additional dependencies
   - additionally, you have to import all css modules with this syntax `import * as ctaStyles from "../styles/cta.module.scss"`
 - don't forget to change netlify NODE_VERSION env to `14.18.2`
+
+## add weekly-lessons
+
+- modify /dev to have weekly lesson info
+- add gatsby-plugin-image to use staticImages instead of graphql querying
