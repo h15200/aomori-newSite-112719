@@ -1,12 +1,12 @@
 import React, { Fragment } from "react"
 import Layout from "../components/layout"
-import Head from '../components/head'
-import {header, container, videoContainer} from "../styles/music.module.scss"
+import Head from "../components/head"
+import { header, container, videoContainer } from "../styles/music.module.scss"
 
 const MusicPage = () => (
   <Layout>
     <Fragment>
-      <Head title='Music'/>
+      <Head title="Music" />
       <h2 className={header}> LISTEN / WATCH</h2>
 
       <div className={container}>

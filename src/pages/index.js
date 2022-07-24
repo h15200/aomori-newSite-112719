@@ -2,14 +2,14 @@ import React, { Fragment } from "react"
 
 import Layout from "../components/layout"
 import CTA from "../components/cta"
-import Head from '../components/head'
+import Head from "../components/head"
 
-import {container, videoContainer} from "../styles/index.module.scss"
+import { container, videoContainer } from "../styles/index.module.scss"
 
 const IndexPage = () => (
   <Layout>
     <Fragment>
-      <Head title="Home"/>
+      <Head title="Home" />
       <CTA />
       <div className={container}>
         <div className={videoContainer}>
