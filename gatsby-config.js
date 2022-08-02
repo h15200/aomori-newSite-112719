@@ -74,9 +74,14 @@ module.exports = {
       resolve: "gatsby-plugin-offline",
     },
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: "UA-154635982-1",
+        trackingIds: ["UA-154635982-1", "G-FJTVPYB2M2"],
+
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+        },
       },
     },
     {
@@ -88,4 +93,4 @@ module.exports = {
       },
     },
   ],
-}
+};
