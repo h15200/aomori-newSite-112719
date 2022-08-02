@@ -28,3 +28,8 @@ To change CTA, src/Markdown/cta and read the template for instructions
 
 - modify /dev to have weekly lesson info
 - add gatsby-plugin-image to use staticImages instead of graphql querying
+
+## prod fail
+
+- sometimes you may have to force refresh a served build
+- just open it in an incognito window to bypass any cache related issues
