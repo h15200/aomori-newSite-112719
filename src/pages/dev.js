@@ -63,7 +63,7 @@ const Dev = () => {
   return (
     <Fragment>
       <Helmet>
-        <title>Webdev & Design</title>
+        <title>Weekly Coding Lessons</title>
         <meta charSet="utf-8" name="description" content={META_CONTENT} />
         <link rel="shortcut icon" type="image/ico" href={faviconDev} />
       </Helmet>
