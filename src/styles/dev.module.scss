@@ -282,6 +282,16 @@ $bp-small: 26.25em; // 420px  h1
   &_description {
     @include paragraph;
   }
+
+  &_li {
+    @include paragraph;
+    line-height: 1.4;
+    list-style-type: disc;
+    margin-left: 2rem;
+    &:first-of-type {
+      margin-top: 1rem;
+    }
+  }
 }
 
 ////////////////

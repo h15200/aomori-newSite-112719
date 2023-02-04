@@ -5,25 +5,38 @@ import { Helmet } from "react-helmet";
 import {
   META_CONTENT,
   CONTACT_BUTTON_TEXT,
-  INTRO_HEADER,
-  INTRO_DESCRIPTION,
   LESSON_HEADER,
-  LESSON_DESCRIPTION,
-  LESSON_SECTION_1_HEADER,
-  LESSON_SECTION_1_DESC,
-  LESSON_SECTION_2_HEADER,
-  LESSON_SECTION_2_DESC,
-  LESSON_SECTION_3_HEADER,
-  LESSON_SECTION_3_DESC,
+  LESSON_SECTION_DESC_Q,
+  LESSON_SECTION_DESC_A,
+  LESSON_SECTION_HOW_Q,
+  LESSON_SECTION_HOW_A,
+  LESSON_SECTION_PROBLEMS_FEATURE_1,
+  LESSON_SECTION_PROBLEMS_FEATURE_2,
+  LESSON_SECTION_PROBLEMS_FEATURE_3,
+  LESSON_SECTION_PROBLEMS_FEATURE_4,
+  LESSON_SECTION_PROBLEMS_FEATURE_5,
+  LESSON_SECTION_PROBLEMS_Q,
+  LESSON_SECTION_PROBLEMS_A,
+  LESSON_SECTION_PROBLEMS_LIST_1,
+  LESSON_SECTION_PROBLEMS_LIST_2,
+  LESSON_SECTION_PROBLEMS_LIST_3,
+  LESSON_SECTION_PROBLEMS_LIST_4,
+  LESSON_SECTION_PROBLEMS_LIST_5,
+  LESSON_SECTION_TOO_GOOD_Q,
+  LESSON_SECTION_TOO_GOOD_A,
+  LESSON_SECTION_CONTACT_Q,
+  LESSON_SECTION_CONTACT_A,
   WEEKLY_CODING_LESSONS_GMAIL,
   HREF_GITHUB,
   HREF_LINKEDIN,
-  CONTACT,
+  CONTACT_US,
   EMAIL,
   GITHUB,
   LINKEDIN,
   COPYRIGHT,
   AUTHOR,
+  LESSON_SECTION_SAME_Q,
+  LESSON_SECTION_SAME_A,
 } from "../constants";
 
 import faviconDev from "../image/faviconDev.ico";
@@ -38,11 +51,11 @@ import {
   nav_link,
   nav_link___yellow,
   intro_header_1,
-  intro_description,
   lesson,
-  lesson_header_2,
   lesson_header_3,
   lesson_description,
+  lesson_ul,
+  lesson_li,
   contact_header_3,
   contact_ul,
   contact_li,
@@ -85,36 +98,56 @@ const Dev = () => {
               </ul>
             </nav>
             <div className={intro}>
-              <div>
-                <h1 className={intro_header_1}>{INTRO_HEADER}</h1>
-                <p className={intro_description}>{INTRO_DESCRIPTION}</p>
-              </div>
+              <h1 className={intro_header_1}>{LESSON_HEADER}</h1>
             </div>
           </div>
         </header>
         <div className={contact_line} />
         <section className={lesson}>
           <div className={subsection}>
-            <h2 className={lesson_header_2}>{LESSON_HEADER}</h2>
-            <p className={lesson_description}>{LESSON_DESCRIPTION}</p>
+            <h3 className={lesson_header_3}>{LESSON_SECTION_DESC_Q}</h3>
+            <p className={lesson_description}>{LESSON_SECTION_DESC_A}</p>
           </div>
           <div className={subsection}>
-            <h3 className={lesson_header_3}>{LESSON_SECTION_1_HEADER}</h3>
-            <p className={lesson_description}>{LESSON_SECTION_1_DESC}</p>
+            <h3 className={lesson_header_3}>{LESSON_SECTION_HOW_Q}</h3>
+            <p className={lesson_description}>{LESSON_SECTION_HOW_A}</p>
+            <ul className={lesson_ul}>
+              <li className={lesson_li}>{LESSON_SECTION_PROBLEMS_FEATURE_1}</li>
+              <li className={lesson_li}>{LESSON_SECTION_PROBLEMS_FEATURE_2}</li>
+              <li className={lesson_li}>{LESSON_SECTION_PROBLEMS_FEATURE_3}</li>
+              <li className={lesson_li}>{LESSON_SECTION_PROBLEMS_FEATURE_4}</li>
+              <li className={lesson_li}>{LESSON_SECTION_PROBLEMS_FEATURE_5}</li>
+            </ul>
           </div>
           <div className={subsection}>
-            <h3 className={lesson_header_3}>{LESSON_SECTION_2_HEADER}</h3>
-            <p className={lesson_description}>{LESSON_SECTION_2_DESC}</p>
+            <h3 className={lesson_header_3}>{LESSON_SECTION_SAME_Q}</h3>
+            <p className={lesson_description}>{LESSON_SECTION_SAME_A}</p>
           </div>
           <div className={subsection}>
-            <h3 className={lesson_header_3}>{LESSON_SECTION_3_HEADER}</h3>
-            <p className={lesson_description}>{LESSON_SECTION_3_DESC}</p>
+            <h3 className={lesson_header_3}>{LESSON_SECTION_PROBLEMS_Q}</h3>
+            <p className={lesson_description}>{LESSON_SECTION_PROBLEMS_A}</p>
+            <ul className={lesson_ul}>
+              <li className={lesson_li}>{LESSON_SECTION_PROBLEMS_LIST_1}</li>
+              <li className={lesson_li}>{LESSON_SECTION_PROBLEMS_LIST_2}</li>
+              <li className={lesson_li}>{LESSON_SECTION_PROBLEMS_LIST_3}</li>
+              <li className={lesson_li}>{LESSON_SECTION_PROBLEMS_LIST_4}</li>
+              <li className={lesson_li}>{LESSON_SECTION_PROBLEMS_LIST_5}</li>
+            </ul>
+          </div>
+
+          <div className={subsection}>
+            <h3 className={lesson_header_3}>{LESSON_SECTION_TOO_GOOD_Q}</h3>
+            <p className={lesson_description}>{LESSON_SECTION_TOO_GOOD_A}</p>
+          </div>
+          <div className={subsection}>
+            <h3 className={lesson_header_3}>{LESSON_SECTION_CONTACT_Q}</h3>
+            <p className={lesson_description}>{LESSON_SECTION_CONTACT_A}</p>
           </div>
         </section>
 
         <section>
           <div className={`${container} `}>
-            <h3 className={contact_header_3}>{CONTACT}</h3>
+            <h3 className={contact_header_3}>{CONTACT_US}</h3>
             <ul className={contact_ul}>
               <li className={contact_li}>
                 <a
