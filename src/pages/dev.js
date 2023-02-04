@@ -10,18 +10,22 @@ import {
   LESSON_SECTION_DESC_A,
   LESSON_SECTION_HOW_Q,
   LESSON_SECTION_HOW_A,
-  LESSON_SECTION_PROBLEMS_FEATURE_1,
-  LESSON_SECTION_PROBLEMS_FEATURE_2,
-  LESSON_SECTION_PROBLEMS_FEATURE_3,
-  LESSON_SECTION_PROBLEMS_FEATURE_4,
-  LESSON_SECTION_PROBLEMS_FEATURE_5,
+  LESSON_SECTION_FEATURE_1,
+  LESSON_SECTION_FEATURE_2,
+  LESSON_SECTION_FEATURE_3,
+  LESSON_SECTION_FEATURE_4,
+  LESSON_SECTION_FEATURE_5,
   LESSON_SECTION_PROBLEMS_Q,
-  LESSON_SECTION_PROBLEMS_A,
-  LESSON_SECTION_PROBLEMS_LIST_1,
-  LESSON_SECTION_PROBLEMS_LIST_2,
-  LESSON_SECTION_PROBLEMS_LIST_3,
-  LESSON_SECTION_PROBLEMS_LIST_4,
-  LESSON_SECTION_PROBLEMS_LIST_5,
+  LESSON_PROBLEM_TOPIC_1,
+  LESSON_PROBLEM_TOPIC_2,
+  LESSON_PROBLEM_TOPIC_3,
+  LESSON_PROBLEM_TOPIC_4,
+  LESSON_PROBLEM_TOPIC_5,
+  LESSON_PROBLEM_TOPIC_1_DESC,
+  LESSON_PROBLEM_TOPIC_2_DESC,
+  LESSON_PROBLEM_TOPIC_3_DESC,
+  LESSON_PROBLEM_TOPIC_4_DESC,
+  LESSON_PROBLEM_TOPIC_5_DESC,
   LESSON_SECTION_TOO_GOOD_Q,
   LESSON_SECTION_TOO_GOOD_A,
   LESSON_SECTION_CONTACT_Q,
@@ -54,8 +58,7 @@ import {
   lesson,
   lesson_header_3,
   lesson_description,
-  lesson_ul,
-  lesson_li,
+  lesson_indent,
   contact_header_3,
   contact_ul,
   contact_li,
@@ -111,13 +114,12 @@ const Dev = () => {
           <div className={subsection}>
             <h3 className={lesson_header_3}>{LESSON_SECTION_HOW_Q}</h3>
             <p className={lesson_description}>{LESSON_SECTION_HOW_A}</p>
-            <ul className={lesson_ul}>
-              <li className={lesson_li}>{LESSON_SECTION_PROBLEMS_FEATURE_1}</li>
-              <li className={lesson_li}>{LESSON_SECTION_PROBLEMS_FEATURE_2}</li>
-              <li className={lesson_li}>{LESSON_SECTION_PROBLEMS_FEATURE_3}</li>
-              <li className={lesson_li}>{LESSON_SECTION_PROBLEMS_FEATURE_4}</li>
-              <li className={lesson_li}>{LESSON_SECTION_PROBLEMS_FEATURE_5}</li>
-            </ul>
+            <br />
+            <p className={lesson_indent}>{LESSON_SECTION_FEATURE_1}</p>
+            <p className={lesson_indent}>{LESSON_SECTION_FEATURE_2}</p>
+            <p className={lesson_indent}>{LESSON_SECTION_FEATURE_3}</p>
+            <p className={lesson_indent}>{LESSON_SECTION_FEATURE_4}</p>
+            <p className={lesson_indent}>{LESSON_SECTION_FEATURE_5}</p>
           </div>
           <div className={subsection}>
             <h3 className={lesson_header_3}>{LESSON_SECTION_SAME_Q}</h3>
@@ -125,14 +127,25 @@ const Dev = () => {
           </div>
           <div className={subsection}>
             <h3 className={lesson_header_3}>{LESSON_SECTION_PROBLEMS_Q}</h3>
-            <p className={lesson_description}>{LESSON_SECTION_PROBLEMS_A}</p>
-            <ul className={lesson_ul}>
-              <li className={lesson_li}>{LESSON_SECTION_PROBLEMS_LIST_1}</li>
-              <li className={lesson_li}>{LESSON_SECTION_PROBLEMS_LIST_2}</li>
-              <li className={lesson_li}>{LESSON_SECTION_PROBLEMS_LIST_3}</li>
-              <li className={lesson_li}>{LESSON_SECTION_PROBLEMS_LIST_4}</li>
-              <li className={lesson_li}>{LESSON_SECTION_PROBLEMS_LIST_5}</li>
-            </ul>
+            <p className={lesson_description}>{LESSON_PROBLEM_TOPIC_1}</p>
+            <br />
+            <p className={lesson_indent}>{LESSON_PROBLEM_TOPIC_1_DESC}</p>
+            <br />
+            <p className={lesson_description}>{LESSON_PROBLEM_TOPIC_2}</p>
+            <br />
+            <p className={lesson_indent}>{LESSON_PROBLEM_TOPIC_2_DESC}</p>
+            <br />
+            <p className={lesson_description}>{LESSON_PROBLEM_TOPIC_3}</p>
+            <br />
+            <p className={lesson_indent}>{LESSON_PROBLEM_TOPIC_3_DESC}</p>
+            <br />
+            <p className={lesson_description}>{LESSON_PROBLEM_TOPIC_4}</p>
+            <br />
+            <p className={lesson_indent}>{LESSON_PROBLEM_TOPIC_4_DESC}</p>
+            <br />
+            <p className={lesson_description}>{LESSON_PROBLEM_TOPIC_5}</p>
+            <br />
+            <p className={lesson_indent}>{LESSON_PROBLEM_TOPIC_5_DESC}</p>
           </div>
 
           <div className={subsection}>
