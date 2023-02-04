@@ -33,3 +33,5 @@ To change CTA, src/Markdown/cta and read the template for instructions
 
 - sometimes you may have to force refresh a served build
 - just open it in an incognito window to bypass any cache related issues
+
+## change copy to weekly-coding-lessons 2/4/23
